@@ -8,9 +8,11 @@ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+# gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 
-gem 'haml-rails'
+# gem 'haml-rails'
+
+gem 'better_errors'
 
 gem 'simple_abs'
 
