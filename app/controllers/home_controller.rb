@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def landing
-  	render :landing
+    @initial_user = InitialUser.new
   end
 
 end

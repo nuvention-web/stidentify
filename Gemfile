@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 # Use postgres as the database for Active Record
 gem 'pg'
 
+# Pry!
+gem 'pry-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 # gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
