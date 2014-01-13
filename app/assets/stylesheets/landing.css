@@ -7,9 +7,9 @@
 }
 
 .landing-panel1 {
-  background-image: url("http://a.fastcompany.net/multisite_files/fastcompany/poster/2013/01/3004507-poster-1280-built-app-help-his-high-school-debate-team.jpg");
-  background-size: cover;
-  background-position: center;
+  background-image: url("http://thejobspot.ryerson.ca/wp-content/uploads/2012/03/podium-in-front-of-red-curtain.jpg");
+  background-size: 120%;
+  background-position: 100% 15%;
   background-attachment: fixed;
   background-repeat:no-repeat;
   position: fixed;
@@ -20,4 +20,6 @@
 }
 
 .landing-learn-more {
+  position: fixed;
+  top: 70%;
 }
