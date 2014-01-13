@@ -1,7 +1,10 @@
 class InitialUsersController < ApplicationController
 
   def create
-    @initial_user = InitialUser.create(initial_user_params)
+    @initial_user = InitialUser.new(initial_user_params)
+    if @initial_user.save
+      InitialUserMailer.signup(@initial_user).deliver
+    end
   end
 
   private
