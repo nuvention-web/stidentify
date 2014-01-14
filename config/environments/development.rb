@@ -32,11 +32,11 @@ Debatable::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "bradpuder.com",
+    domain: "debatable.co",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: 'brad@bradpuder.com',
-    password: 'bradley123'
+    user_name: 'team@debatable.co',
+    password: 'password'
   }
 
   # Don't care if the mailer can't send
