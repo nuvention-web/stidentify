@@ -1,19 +1,84 @@
 <!-- Begin Panel 1 -->
-<div class="landing-panel1">
-  <button class="btn btn-primary btn-lg landing-learn-more">Learn More</button>
+<div class="row">
+  <div class="landing-panel1">
+    <div class="panel1-content">
+      <img src=<%= image_path 'logo.png'%> height="90" width="450">
+      <p>The future of speech and debate is here. Debatable is an online platform connecting coaches and debaters like never before.</p>
+      <button class="btn btn-primary btn-lg landing-learn-more">Learn More</button>
+    </div>
+  </div>
 </div>
 <!-- End Panel 1 -->
 
 <!-- Begin Panel 2 -->
-<!-- VIDEO1 -->
+<div class="landing-panel2">
+  <div class="panel2-content">
+    <p>The future of speech and debate is here. Debatable is an online platform connecting coaches and debaters like never before.</p>
+  </div>
+  <div class="panel2-video">
+    <iframe width="400" height="315" src="//www.youtube.com/embed/pco91kroVgQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
 <!-- End Panel 2 -->
 
 <!-- Begin Panel 3 -->
-<!-- icons -->
+<div class="landing-panel3">
+  <div class="row">
+    <div class="col-sm-5 col-md-4">
+      <div class="thumbnail">
+        <img src=<%= image_path 'coach.svg' %>>
+        <div class="caption">
+          <h3>Coaching</h3>
+          <p>Receive one-on-one online coaching services from the nation's best debate coaches.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5 col-md-4">
+      <div class="thumbnail">
+        <img src=<%= image_path 'document.svg' %>>
+        <div class="caption">
+          <h3>Prep Materials</h3>
+          <p>Access exclusive prep materials and the evidence you need to win your next round.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-5 col-md-4">
+      <div class="thumbnail">
+        <img src=<%= image_path 'analytics.svg' %>>
+        <div class="caption">
+          <h3>Analytics</h3>
+          <p>Follow trends and data from NFL like never before and see how you stack up regionally and nationally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- End Panel 3 -->
 
 <!-- Begin Panel 4 -->
-<!-- Speech Rate -->
+<div class="landing-panel4">
+  <div class="panel4-content1">
+      <h2>Premiere Debate Content</h2>
+      <p>Debatable will be the go-to destination for all your debate prep materials. For example, checkout our piece on Speech Rate Theory to help you win your next round.</p>
+  </div>
+  <div class="panel4-content2">
+    <h1>Speech Rate Theory</h1>
+
+    <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.</p>
+
+    <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.......</p>
+
+    <button class="btn btn-primary btn-lg landing-read-more">Sign up to read the rest</button>
+  </div>
+</div>
+
+
+
+
 <!-- End Panel 4 -->
 
 <%= render 'home/landing_modal' %>
