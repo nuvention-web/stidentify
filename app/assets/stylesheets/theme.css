@@ -127,16 +127,16 @@ a.list-group-item.active .list-group-item-text {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #6275CB;
+  background-color: #5B6FC6;
   border-color: transparent;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
-  color: #666666;
-  background-color: #ffffff;
-  border-color: #666666;
+  color: #ffffff;
+  background-color: #3E51A8;
+  border-color: transparent;
 }
 .btn-primary.disabled,
 .btn-primary[disabled],

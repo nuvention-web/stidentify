@@ -1,5 +1,5 @@
 .initial-signup {
-  width: 18em;
+  width: 18.5em;
 }
 
 .initial-signup .modal-body {
@@ -7,12 +7,12 @@
 }
 
 .landing-panel1 {
-  background-image: url("");
-  background-size: cover;
-  background-position: center;
+  background-image: url("http://thejobspot.ryerson.ca/wp-content/uploads/2012/03/podium-in-front-of-red-curtain.jpg");
+  background-size: 120%;
+  background-position: 100% 15%;
   background-attachment: fixed;
   background-repeat:no-repeat;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -20,4 +20,11 @@
 }
 
 .landing-learn-more { 
+  position: absolute;
+  top: 70%;
+  left: 65%;
+}
+
+.initial-radio {
+  padding-left: 4px;
 }

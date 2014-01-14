@@ -10,22 +10,27 @@
         <%= form_for @initial_user do |f| %>
 
           <div class="form-group">
-            <%= f.text_field :name, placeholder: "name" %>
+            <%= f.text_field :name, placeholder: "name", class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= f.label :category, "I am a:" %><br/>
-            <%= f.radio_button :category, "coach" %><%= f.label :category, "coach" %>&nbsp;
-            <%= f.radio_button :category, "debater" %><%= f.label :category, "debater" %>&nbsp;
-            <%= f.radio_button :category, "parent" %><%= f.label :category, "parent" %>
+            <%= f.label :category, "I am a:" %>
+        
+
+              <%= f.radio_button :category, "coach" %><%= f.label :category, "coach", class: "radio-inline initial-radio" %>
+         
+              <%= f.radio_button :category, "debater" %><%= f.label :category, "debater", class: "radio-inline initial-radio" %>
+         
+              <%= f.radio_button :category, "parent" %><%= f.label :category, "parent", class: "radio-inline initial-radio" %>
+          </div>
+         
+
+          <div class="form-group">
+            <%= f.text_field :email, placeholder: "email address", class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= f.text_field :email, placeholder: "email address" %>
-          </div>
-
-          <div class="form-group">
-            <%= f.submit "Sign up to learn more", :class => "btn btn-primary" %>
+            <%= f.submit "Sign up to learn more", :class => "btn btn-primary form-control" %>
           </div>
         <% end %>
 
@@ -45,22 +50,30 @@
 
     $("form").on("submit", function(e) {
       e.preventDefault();
-      $.ajax({
-        url: "<%= initial_users_path %>",
-        type: "POST",
-        dataType: 'json',
-        data: "initial_user[" + $(this).serialize(),
-        context: this,
-        success: function() {
-          clearModal();
-          console.log("<%= InitialUser.all.last.name %>")
-        }
-      });
+      var email = $('#initial_user_email').val()
+      if (validEmail(email)) {
+        $.ajax({
+          url: "<%= initial_users_path %>",
+          type: "POST",
+          dataType: 'json',
+          data: "initial_user[" + $(this).serialize(),
+          context: this,
+          success: clearModal()
+        });
+      } else {
+        $('.modal-body').prepend("<p>That's not a valid email address!</p>");
+      }
     })
 	}
 
+  function validEmail(email) {
+    var reg = /([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/i
+    return reg.test(email);
+  }
+
   function clearModal(){
-    $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable ready to go.")  
+    $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable ready to go.");
+     console.log("<%= InitialUser.all.last.name %>");  
   }
 
   

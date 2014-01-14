@@ -4,6 +4,8 @@ class InitialUsersController < ApplicationController
     @initial_user = InitialUser.new(initial_user_params)
     if @initial_user.save
       InitialUserMailer.signup(@initial_user).deliver
+    else
+      render 'home/landing'
     end
   end
 
