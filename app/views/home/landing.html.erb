@@ -1,80 +1,19 @@
+<!-- Begin Panel 1 -->
 <div class="landing-panel1">
   <button class="btn btn-primary btn-lg landing-learn-more">Learn More</button>
 </div>
+<!-- End Panel 1 -->
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog initial-signup">
-    <div class="modal-content">
-      <div class="modal-body">
-        <%= form_for @initial_user do |f| %>
+<!-- Begin Panel 2 -->
 
-          <div class="form-group">
-            <%= f.text_field :name, placeholder: "name", class: "form-control" %>
-          </div>
+<!-- End Panel 2 -->
 
-          <div class="form-group">
-            <%= f.label :category, "I am a:" %>
-        
+<!-- Begin Panel 3 -->
 
-              <%= f.radio_button :category, "coach" %><%= f.label :category, "coach", class: "radio-inline initial-radio" %>
-         
-              <%= f.radio_button :category, "debater" %><%= f.label :category, "debater", class: "radio-inline initial-radio" %>
-         
-              <%= f.radio_button :category, "parent" %><%= f.label :category, "parent", class: "radio-inline initial-radio" %>
-          </div>
-         
-
-          <div class="form-group">
-            <%= f.text_field :email, placeholder: "email address", class: "form-control" %>
-          </div>
-
-          <div class="form-group">
-            <%= f.submit "Sign up to learn more", :class => "btn btn-primary form-control" %>
-          </div>
-        <% end %>
-
-      </div>
-
-    </div>
-  </div>
-
-
+<%= render 'home/landing_modal' %>
 
 <script>
-	window.onload = function() {
-		$("button:contains('Learn More')").on("click", function(e) {
-			e.preventDefault();
-			$("#myModal").modal('show');
-		})
-
-    $("form").on("submit", function(e) {
-      e.preventDefault();
-      var email = $('#initial_user_email').val()
-      if (validEmail(email)) {
-        $.ajax({
-          url: "<%= initial_users_path %>",
-          type: "POST",
-          dataType: 'json',
-          data: "initial_user[" + $(this).serialize(),
-          context: this,
-          success: clearModal()
-        });
-      } else {
-        $('.modal-body').prepend("<p>That's not a valid email address!</p>");
-      }
-    })
-	}
-
-  function validEmail(email) {
-    var reg = /([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/i
-    return reg.test(email);
-  }
-
-  function clearModal(){
-    $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable ready to go.");
-     console.log("<%= InitialUser.all.last.name %>");  
-  }
-
-  
+  window.onload = function() {
+    initializeLanding();
+  }		
 </script>

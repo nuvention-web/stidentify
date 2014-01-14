@@ -1,0 +1,38 @@
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog initial-signup">
+    <div class="modal-content">
+      <div class="modal-body">
+        <%= form_for @initial_user do |f| %>
+
+          <div class="form-group">
+            <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :category, "I am a:" %><br/>
+              <%= f.radio_button :category, "coach" %>
+              <%= f.label :category, "coach", class: "radio-inline initial-radio" %>
+         
+              <%= f.radio_button :category, "debater" %>
+              <%= f.label :category, "debater", class: "radio-inline initial-radio" %>
+         
+              <%= f.radio_button :category, "parent" %>
+              <%= f.label :category, "parent", class: "radio-inline initial-radio" %>
+          </div>
+         
+
+          <div class="form-group">
+            <%= f.text_field :email, placeholder: "email address", class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.submit "Sign up to learn more", :class => "btn btn-primary form-control" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
