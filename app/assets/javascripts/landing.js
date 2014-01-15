@@ -16,7 +16,7 @@ function initializeLanding() {
     
     if (validEmail(email)) {
       $.ajax({
-        url: "<%= initial_users_path %>",
+        url: "/initial_users",
         type: "POST",
         dataType: 'json',
         data: "initial_user[" + $(this).serialize(),
