@@ -4,7 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p>Hi <strong><%= @initial_user.name %></strong>,</p>
+    <p>Hi <%= @initial_user.name.split[0...1].join(' ') %>,</p>
 
     <p>Thanks for signing up for Debatable, your source for everything debatable!</p>
 
