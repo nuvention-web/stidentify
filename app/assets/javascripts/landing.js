@@ -47,5 +47,5 @@ function validEmail(email) {
 }
 
 function clearModal(){
-  $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable ready to go.");
+  $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable is ready to go.");
 }
