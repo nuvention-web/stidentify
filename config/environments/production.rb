@@ -68,7 +68,7 @@ Debatable::Application.configure do
     port: 587,
     domain: "debatable.co",
     authentication: "plain",
-    enable_starttls_auto: true,
+    #enable_starttls_auto: true,
     user_name: 'team@debatable.co',
     password: 'password'
   }
