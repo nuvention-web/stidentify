@@ -8,4 +8,13 @@ Debatable::Application.routes.draw do
 
   root :to => "home#landing"
 
+  resources :instructors
+  resources :schools, except: [:destroy]
+  resources :students
+  resources :tutorials
+  resources :workshops
+
+  resource :session, only: [:new, :create, :destroy]
+
+
 end
