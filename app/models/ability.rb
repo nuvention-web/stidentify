@@ -10,7 +10,7 @@ class Ability
       can :read, Instructor
       can :read, Student
       can :manage, user.school
-      can :read School
+      can :read, School
     elsif user.is_a?(Student)
       can :manage, user
       can :read, Instructor
