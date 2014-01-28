@@ -1,5 +1,5 @@
 class InitialUserMailer < ActionMailer::Base
-  default from: "brad@bradpuder.com"
+  default from: "The Debatable Team <team@debatable.co>"
 
   def signup(initial_user)
     @initial_user = initial_user
