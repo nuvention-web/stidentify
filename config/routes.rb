@@ -7,6 +7,8 @@ Debatable::Application.routes.draw do
 
 
   root :to => "home#landing"
+  get "/signup", to: "home#signup"
+  post "/create_user", to: "home#create_user"
 
   resources :instructors
   resources :schools, except: [:destroy]

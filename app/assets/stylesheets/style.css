@@ -1,0 +1,42 @@
+.navbar {
+}
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: white;
+  border-bottom-color: white;
+}
+
+.navbar-form {
+  margin-left: 2.5em;
+  width: 35%;
+}
+
+.navbar-form .form-group {
+  width: 78%
+}
+
+.new-user {
+  position: relative;
+  right: 2.5em;
+}
+
+.show-box.well {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 7em;
+  height: 300px;
+  background-color: #5B6FC6;
+}
+
+.signup-background {
+  width: 40%;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.welcome, .welcome-text {
+  margin-top: 2em;
+  color: white;
+  text-align: center;
+}
+

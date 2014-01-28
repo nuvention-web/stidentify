@@ -8,11 +8,26 @@
 .btn-link:focus {
   color: #3E51A8;
 }
+
+.navbar-default {
+  background-color: #5B6FC6;
+  color: white;
+  border-radius: 0;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > li > a:focus {
-  border-bottom-color: #5B6FC6;
+  border-bottom-color: rgba(0, 0, 0, 0);
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a,
@@ -20,7 +35,7 @@
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  border-bottom-color: #5B6FC6;
+  border-bottom-color: rgba(0, 0, 0, 0);
 }
 .navbar-inverse .dropdown-menu > li > a:hover,
 .navbar-inverse .dropdown-menu > li > a:focus {

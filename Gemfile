@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 # Use postgres as the database for Active Record
 gem 'pg'
 
+# Use cancan for user permissions
+gem 'cancan'
+
 # Pry!
 gem 'pry-rails'
 
@@ -42,8 +45,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+#Use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
