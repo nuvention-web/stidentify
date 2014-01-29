@@ -2,7 +2,7 @@ function initializeLanding() {
   $(".landing-learn-more").on("click", function(e) {
       e.preventDefault();
       $("#myModal").modal('show');
-  })
+  });
 
   $(".landing-read-more").on("click", function(e) {
     e.preventDefault();
