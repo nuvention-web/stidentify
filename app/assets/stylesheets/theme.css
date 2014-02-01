@@ -144,7 +144,7 @@ a.list-group-item.active .list-group-item-text {
   color: #ffffff;
   background-color: #2A69B5;
   padding-top: 14px;
-  font-family: "Myriad Pro";
+  font-family: "Myriad Pro", Myriad, sans-serif;
   font-style: normal;
   font-size: 24px;
   line-height: 70%;
@@ -165,7 +165,7 @@ a.list-group-item.active .list-group-item-text {
     color: #ffffff;
     background-color: #2A69B5;
     padding-top: 14px;
-    font-family: "Myriad Pro";
+    font-family: "Myriad Pro", Myriad, sans-serif;
     font-style: normal;
     font-size: 42px;
     line-height: 70%;
