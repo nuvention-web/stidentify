@@ -6,14 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <% if current_instructor %>
-    <%= render 'layouts/instructor_nav' %>
-  <% elsif current_student %>
-    <%= render 'layouts/student_nav' %>
-  <% else %>
-    <%= render 'layouts/standard_nav' %>
-  <% end %>
+
 
 <%= yield %>
 
