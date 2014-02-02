@@ -164,14 +164,14 @@ a.list-group-item.active .list-group-item-text {
 .btn-xlarge {
     color: #ffffff;
     background-color: #2A69B5;
-    padding-top: 14px;
+    padding-top: 2vh;
     font-family: "Myriad Pro", Myriad, sans-serif;
     font-style: normal;
-    font-size: 42px;
+    font-size: 5vh;
     line-height: 70%;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
+    -webkit-border-radius: 1vh;
+       -moz-border-radius: 1vh;
+            border-radius: 1vh;
 }
 .btn-xlarge:hover,
 .btn-xlarge:focus,
