@@ -1,8 +1,14 @@
 function initializeLanding() {
-  $("button:contains('Learn More')").on("click", function(e) {
-        e.preventDefault();
-        $("#myModal").modal('show');
-  })
+  $(".landing-learn-more").on("click", function(e) {
+      e.preventDefault();
+      $("#myModal").modal('show');
+  });
+
+  $(".landing-read-more").on("click", function(e) {
+    e.preventDefault();
+    $(".modal-body").prepend("<p>Sign up below to read the full article</p>");
+    $("#myModal").modal('show');
+  });
 
   $("form").on("submit", function(e) {
     e.preventDefault();
@@ -10,7 +16,7 @@ function initializeLanding() {
     
     if (validEmail(email)) {
       $.ajax({
-        url: "<%= initial_users_path %>",
+        url: "/initial_users",
         type: "POST",
         dataType: 'json',
         data: "initial_user[" + $(this).serialize(),
@@ -21,6 +27,18 @@ function initializeLanding() {
       $('.modal-body').prepend("<p>That's not a valid email address!</p>");
     }
   })
+
+  $(".thumbnail").on("mouseenter", function(){
+    $(this).css("background-color", "#5B6FC6");
+    $(this).find("p").css("color", "white");
+    $(this).find("h3").css("color", "white");
+  })
+
+  $(".thumbnail").on("mouseleave", function(){
+    $(this).css("background-color", "white");
+    $(this).find("p").css("color", "black");
+    $(this).find("h3").css("color", "black");
+  })
 }
 
 function validEmail(email) {
@@ -29,5 +47,5 @@ function validEmail(email) {
 }
 
 function clearModal(){
-  $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable ready to go.");
+  $(".modal-body").text("Thanks for signing up! We'll let you know when Debatable is ready to go.");
 }

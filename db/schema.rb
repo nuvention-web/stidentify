@@ -11,15 +11,86 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113002534) do
+ActiveRecord::Schema.define(version: 20140128234312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: true do |t|
+  end
 
   create_table "initial_users", force: true do |t|
     t.string "category", null: false
     t.string "name",     null: false
     t.string "email",    null: false
+  end
+
+  create_table "instructors", force: true do |t|
+    t.string  "first_name",      null: false
+    t.string  "last_name",       null: false
+    t.string  "email",           null: false
+    t.text    "about_me"
+    t.string  "password_digest", null: false
+    t.integer "school_id"
+  end
+
+  create_table "instructors_skills", force: true do |t|
+    t.integer "instructor_id"
+    t.integer "skill_id"
+  end
+
+  create_table "schools", force: true do |t|
+    t.string "name", null: false
+  end
+
+  create_table "skills", force: true do |t|
+    t.string "name", null: false
+  end
+
+  create_table "skills_students", force: true do |t|
+    t.integer "skill_id"
+    t.integer "student_id"
+  end
+
+  create_table "slots", force: true do |t|
+    t.datetime "start",  null: false
+    t.datetime "finish", null: false
+  end
+
+  create_table "slots_tutorials", force: true do |t|
+    t.integer "slot_id"
+    t.integer "tutorial_id"
+  end
+
+  create_table "slots_workshops", force: true do |t|
+    t.integer "slot_id"
+    t.integer "workshop_id"
+  end
+
+  create_table "students", force: true do |t|
+    t.string  "first_name",      null: false
+    t.string  "last_name",       null: false
+    t.string  "email",           null: false
+    t.string  "password_digest", null: false
+    t.text    "about_me"
+    t.integer "school_id"
+  end
+
+  create_table "students_workshops", force: true do |t|
+    t.integer "student_id"
+    t.integer "workshop_id"
+  end
+
+  create_table "tutorials", force: true do |t|
+    t.integer "student_id"
+    t.integer "instructor_id"
+    t.text    "about"
+  end
+
+  create_table "workshops", force: true do |t|
+    t.integer "instructor_id"
+    t.string  "name",          null: false
+    t.text    "about",         null: false
   end
 
 end

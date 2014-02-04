@@ -1,0 +1,65 @@
+<center><p><em>all fields below are required</em></p></center>
+<div class="signup-background">
+  <%= form_tag "/create_user", class: "form-horizontal new-user" do %>
+    <div class="form-group">
+      <%= label_tag :first_name, "First Name", class: "control-label col-sm-5" %>
+      <div class="col-sm-6">
+        <%= text_field_tag :first_name, nil, placeholder: "John", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :last_name, "Last Name", class: "control-label col-sm-5" %>
+      <div class="col-sm-6">
+        <%= text_field_tag :last_name, nil, placeholder: "Smith", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :email, "Email Address", class: "control-label col-sm-5" %>
+      <div class="col-sm-6">
+        <%= text_field_tag :email, nil,  placeholder: "johnsmith@gmail.com", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :password, "Password", class: "control-label col-sm-5" %>
+      <div class="col-sm-6">
+        <%= password_field_tag :password, nil,  placeholder: "•••••••••", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :password_confirmation, "Confirm Password", class: "control-label col-sm-5" %>
+      <div class="col-sm-6">
+        <%= password_field_tag :password_confirmation, nil,  placeholder: "•••••••••", class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-5 col-sm-8">
+        <div class="radio inline">
+          <label>
+            <%= radio_button_tag :category, :instructor %> Instructor
+          </label>
+        </div>
+        <div class="radio inline">
+          <label>
+            <%= radio_button_tag :category, :student %> Student
+          </label>
+        </div>
+        <div class="radio inline">
+          <label>
+            <%= radio_button_tag :category, :other %> Other
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-5 col-sm-10">
+        <%= submit_tag "Sign Up", class: "btn btn-primary col-sm-5" %>
+      </div>
+    </div>
+  <% end %>
+</div>

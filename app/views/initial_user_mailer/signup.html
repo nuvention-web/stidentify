@@ -4,14 +4,14 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <p>Hi <strong><%= @initial_user.name %></strong>,</p>
+    <p>Hi <%= @initial_user.name.split[0...1].join(' ') %>,</p>
 
-    <p>Thanks for signing up for Debatable, your source for everything debatable!</p>
+    <p>Thanks for signing up for Debatable, your source for everything debatable!<br>
 
-    <p>To checkout the full article on Speech Rate Theory and how you can use it to win your next round, click here</p>
+    To checkout the full article on Speech Rate Theory and how you can use it to win your next round, click here</p>
 
-    <p>We'll be in touch,</p>
+    <p>We'll be in touch,<br>
 
-    <p>The Debatable Team</p>
+    The Debatable Team</p>
   </body>
 </html>
