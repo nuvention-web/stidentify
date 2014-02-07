@@ -4,6 +4,7 @@
   <div class="modal-dialog initial-signup">
     <div class="modal-content">
       <div class="modal-body">
+
         <%= form_for @initial_user do |f| %>
 
           <div class="form-group">
@@ -12,14 +13,14 @@
 
           <div class="form-group">
             <%= f.label :category, "I am a:" %><br>
-              <%= f.radio_button :category, "coach" %>
-              <%= f.label :category, "coach", class: "radio-inline initial-radio" %>
+              <%= f.radio_button :category, "Coach" %>
+              <%= f.label :category, "Coach", class: "radio-inline initial-radio" %>
          
-              <%= f.radio_button :category, "debater" %>
-              <%= f.label :category, "debater", class: "radio-inline initial-radio" %>
+              <%= f.radio_button :category, "Debater" %>
+              <%= f.label :category, "Debater", class: "radio-inline initial-radio" %>
          
-              <%= f.radio_button :category, "parent" %>
-              <%= f.label :category, "parent", class: "radio-inline initial-radio" %>
+              <%= f.radio_button :category, "Other" %>
+              <%= f.label :category, "Other", class: "radio-inline initial-radio" %>
           </div>
          
 
@@ -28,7 +29,7 @@
           </div>
 
           <div class="form-group">
-            <%= f.submit "Sign up to learn more", :class => "btn btn-primary form-control" %>
+            <%= f.submit "Submit", :class => "btn btn-new form-control" %>
           </div>
         <% end %>
       </div>

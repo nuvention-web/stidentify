@@ -1593,6 +1593,7 @@ textarea.form-control {
 }
 .form-group {
   margin-bottom: 15px;
+  font-family: "Myriad Pro";
 }
 .radio,
 .checkbox {
