@@ -1,5 +1,19 @@
 source 'https://rubygems.org'
 
+group :test do
+  # gem 'rack_session_access'
+  gem 'rspec-rails'
+  gem "factory_girl_rails"
+  # gem "database_cleaner"
+  gem "email_spec"
+  gem "capybara"
+  # gem 'launchy'
+  gem 'faker'
+  gem "selenium-webdriver"
+  gem "shoulda-matchers"
+  gem 'rspec-retry'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
