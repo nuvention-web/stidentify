@@ -1,5 +1,19 @@
 source 'https://rubygems.org'
 
+group :test do
+  # gem 'rack_session_access'
+  gem 'rspec-rails'
+  gem "factory_girl_rails"
+  # gem "database_cleaner"
+  gem "email_spec"
+  gem "capybara"
+  # gem 'launchy'
+  gem 'faker'
+  gem "selenium-webdriver"
+  gem "shoulda-matchers"
+  gem 'rspec-retry'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -14,7 +28,8 @@ gem 'pry-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-# gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+
+gem 'bootstrap-sass'
 
 # gem 'haml-rails'
 
@@ -39,6 +54,10 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+group :development do
+	gem 'rails_layout'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
