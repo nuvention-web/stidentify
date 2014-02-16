@@ -5,3 +5,7 @@
 a:hover {
 	text-decoration: none;
 };
+
+#logo span {
+	color: #ffffff;
+}
