@@ -836,18 +836,20 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 						$(this).children('ul').stop(true, true).fadeOut(50);
 					});
 				}
-				
+
 				self.nav.on('click', 'a', function (e) {
 					var $this = $(this).parent('li'),
 						$href = $this.children('a').attr('href');
-					if (!self.checkHashLink($href)) {
-						e.preventDefault();
-						if (self.touch) {
-							if (self.nav.hasClass('active')) {
-								self.nav.stop(true, true).slideUp('fast').removeClass('active');
-							}
-						}	
-						self.sectionAnimate($($href));
+					if ($href.indexOf("#") != -1) {
+						if (!self.checkHashLink($href)) {
+							e.preventDefault();
+							if (self.touch) {
+								if (self.nav.hasClass('active')) {
+									self.nav.stop(true, true).slideUp('fast').removeClass('active');
+								}
+							}	
+							self.sectionAnimate($($href));
+						}
 					}
 				});
 				

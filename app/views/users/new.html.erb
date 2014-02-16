@@ -10,12 +10,15 @@
       <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
       <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "col-sm-2" %>
 
-      <%= f.label :over_18, "I am over 18:" %>
-      <%= f.check_box :over_18 %>
-
       <br/>
+  
+      <center>
 
-      <%= f.submit "Sign Up", class: "button turquoise large" %>
+      <%= f.label :over_18, "I am over 18:", class: "over_18" %> &nbsp;&nbsp;
+      <%= f.check_box :over_18 %>
+      </center>
+
+      <%= f.submit "Sign Up", class: "button turquoise middle" %>
 
   <% end %>
 </div>
