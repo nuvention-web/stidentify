@@ -1,7 +1,22 @@
+a:hover {
+  text-decoration: none;
+}
+
 .fullscreen-thing {
 	height: 100vh; 
 }
 
-a:hover {
-	text-decoration: none;
-};
+.header2 {
+  
+}
+
+input {
+  margin-bottom: 0.8em;
+}
+
+.new_user {
+  margin-top: 3em;
+  width: 20%;
+  margin: 5em auto 0 auto;
+}
+

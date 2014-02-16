@@ -18,6 +18,7 @@ development:
   adapter: postgresql
   encoding: unicode
   database: stidentify_development
+  username: bradpuder
   pool: 5
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -45,10 +46,12 @@ test:
   adapter: postgresql
   encoding: unicode
   database: stidentify_test
+  username: bradpuder
   pool: 5
 
 production:
   adapter: postgresql
   encoding: unicode
   database: stidentify_production
+  username: bradpuder
   pool: 5

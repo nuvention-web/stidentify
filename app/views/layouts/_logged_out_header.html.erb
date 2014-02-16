@@ -1,0 +1,42 @@
+<!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - --> 
+  
+
+<% if params[:action] == "new" %>
+
+  <header id="header" class="transparent header-shrink">
+
+<% else %>
+
+  <header id="header" class="transparent">
+
+<% end %>
+  
+  <div class="header-in">
+    
+    <h1 id="logo"><a href="index.html">Accio</a></h1>
+    
+    <a id="responsive-nav-button" class="responsive-nav-button" href="#"></a>
+    
+    <nav id="navigation" class="navigation">
+      
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#folio">Folio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><%= link_to "Sign Up", new_user_path %></li>
+        <li><a href="shortcodes.html">Sign In</a></li>
+      </ul>
+
+    </nav><!--/ #navigation-->
+    
+  </div><!--/ .header-in-->
+  
+</header><!--/ #header-->
+
+<script> document.querySelector('#header').disabled = true </script>
+
+<!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->
