@@ -1,15 +1,8 @@
 <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - --> 
   
-<% if params[:action] == "new" %>
 
-  <header class="transparent header-shrink">
+<header id="header" class="transparent">
 
-<% else %>
-
-  <header id="header" class="transparent">
-
-<% end %>
-  
   <div class="header-in">
     
     <h1 id="logo"><a>STId</a></h1>
@@ -36,7 +29,8 @@
         <li><a href="#about">Problem</a></li>
         <li><a href="#team">Solution</a></li>
         <li><a href="#services">Get Tested</a></li>
-        <li><a href="#folio">Sign Up</a></li>
+        <li><%= link_to 'Your Account', user_path(current_user) %></li>
+        <li><%= link_to 'Logout', session_path(current_user), :method => :delete %></li>
       </ul>
 
     </nav><!--/ #navigation-->
@@ -45,6 +39,5 @@
   
 </header><!--/ #header-->
 
-<script> document.querySelector('#header').disabled = true </script>
 
 <!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->

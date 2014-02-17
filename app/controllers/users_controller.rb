@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
-    params = params[:user]
+    params = user_params
     @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
     @user.over_18 = ( params[:over_18] == "1" )
     @user.password = params[:password]
@@ -31,6 +30,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :password, :password_confirmation, :email, :over_18)
   end
 
 end

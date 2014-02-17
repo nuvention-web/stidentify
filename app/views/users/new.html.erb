@@ -1,4 +1,7 @@
-<center><p><em>all fields below are required</em></p></center>
+<center><p class ="required-fields"><em>All fields below are required.</em>
+<br/>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong>
+
+</p></center>
 <div class="signup-background">
   <%= form_for @user, class: "form-horizontal new-user" do |f| %>
       
@@ -11,7 +14,7 @@
       <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "col-sm-2" %>
 
       <br/>
-  
+
       <center>
 
       <%= f.label :over_18, "I am over 18:", class: "over_18" %> &nbsp;&nbsp;

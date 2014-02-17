@@ -1,8 +1,6 @@
 <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - --> 
+<header class="transparent header2 header-shrink">
   
-
-<header id="header" class="transparent">
-
   <div class="header-in">
     
     <h1 id="logo"><a>STId</a></h1>
@@ -25,11 +23,12 @@
             </li>
           </ul>
         </li> -->
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Problem</a></li>
-        <li><a href="#team">Solution</a></li>
-        <li><a href="#services">Get Tested</a></li>
-        <li><%= link_to "Sign Up", new_user_path%></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="#home">Find Testing Center</a></li>
+        <li><a href="#about">View Results</a></li>
+        <li><a href="#team">Add Results</a></li>
+        <li><a href="#services">Match</a></li>
+        <li><%= link_to 'Logout', session_path(current_user), :method => :delete %></li>
       </ul>
 
     </nav><!--/ #navigation-->

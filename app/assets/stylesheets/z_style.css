@@ -39,15 +39,25 @@ input {
 	color: #ffffff;
 }
 
-.new_user {
-  margin-top: 2.5em;
+.new_user, .sign-in {
   width: 20%;
-  margin: 5em auto 0 auto;
+  margin: 2em auto 0 auto;
 }
 
 .over_18 {
   font-size: 18px;
   margin: 1em 0;
+}
+
+.required-fields {
+  margin-top: 5em;
+}
+
+.sign-in {
+  margin-top: 12em;
+}
+
+.signup-background p {
 }
 
 

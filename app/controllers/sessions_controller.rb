@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       log_in!(user)
-      redirect_to dashboard_path(user)
+      redirect_to user_path(user)
     else
       @message = "Sorry, either the email address or password you entered was incorrect. Try again:"
       render :new

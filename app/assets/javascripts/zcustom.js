@@ -739,7 +739,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 			},
 			queryLoader: function (self, $window) {
 				this.el.queryLoader2({
-					barColor: '#00c2a9',
+					barColor: '#B61F1F',
 					backgroundColor: '#fff',
 					percentage: true,
 					barHeight: 3,

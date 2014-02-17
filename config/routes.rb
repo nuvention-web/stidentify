@@ -5,4 +5,6 @@ Stidentify::Application.routes.draw do
   
 
   resources :users, except: [:index]
+
+  resource :session
 end
