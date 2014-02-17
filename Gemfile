@@ -14,6 +14,11 @@ group :test do
   gem 'rspec-retry'
 end
 
+gem 'json'
+
+#HTTParty for simpler http request
+gem 'httparty'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 

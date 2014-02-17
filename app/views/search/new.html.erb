@@ -1,0 +1,19 @@
+<div class="signup-background">
+
+  <%= form_tag search_create_user_path, class: "form-horizontal search" do %>
+    <%= label_tag :radius, "within" %>
+    <%= select_tag :radius, options_for_select(["10 miles", "25 miles", "50 miles", "100 miles"], "25 miles") %>
+    <br/>
+    <%= label_tag :location, "of" %>
+    <%= text_field_tag :location, nil, placeholder: "Your Location", class: "col-sm-2" %>
+    <%= submit_tag "Search", class: "button turquoise middle col-sm-12" %>
+
+  <% end %>
+
+</div>
+
+<script>
+  // window.onload = function(){
+  //   initializeMaps();
+  // }
+</script>

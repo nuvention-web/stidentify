@@ -1,0 +1,11 @@
+
+<div class="gmap">
+  <div id="map">
+  </div>
+</div>
+
+<script>
+  window.onload = function() {
+    searchResults($.parseJSON(<%= @places_response.to_json.html_safe %>), <%= @latlng["lat"] %>, <%= @latlng["lng"] %>);
+  }
+</script>
