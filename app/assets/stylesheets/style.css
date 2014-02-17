@@ -713,7 +713,7 @@ body {
 	left: 0;
 	z-index: 99;
 	width: 100%;
-	border-bottom: 1px solid #ececec;
+	/*border-bottom: 1px solid #ececec;*/
 	background-color: #fff;
 	line-height: 0;
 	
