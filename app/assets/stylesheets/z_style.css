@@ -4,11 +4,15 @@ a:hover {
 
 .button {
   margin-top: 1em;
-  width: 245px !important;
 }
 
 .fullscreen-thing {
 	height: 100vh; 
+}
+
+.gmap {
+  width: 400px;
+  margin-top: 5em;
 }
 
 .header2 {
@@ -39,7 +43,12 @@ input {
 	color: #ffffff;
 }
 
-.new_user, .sign-in {
+#map {
+  width: 400px;
+  height: 400px;
+}
+
+.new_user, .sign-in, .search {
   width: 20%;
   margin: 2em auto 0 auto;
 }
@@ -53,11 +62,12 @@ input {
   margin-top: 5em;
 }
 
-.sign-in {
-  margin-top: 12em;
+.search {
+  margin-top: 8em;
 }
 
-.signup-background p {
+.sign-in {
+  margin-top: 12em;
 }
 
 
