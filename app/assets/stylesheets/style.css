@@ -3030,7 +3030,7 @@ body {
 			width: 130%;
 			height: 1px;
 			background-color: #dcdcdc;
-			background-color: rgba(270,270,270, .5);
+			background-color: rgba(255,255,255, .5);
 		}
 		
 		.quote-image:before {
