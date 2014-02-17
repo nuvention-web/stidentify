@@ -3,7 +3,7 @@ class SearchController < ApplicationController
   def new
   end
 
-  def create
+  def results
     location = params[:location].gsub(" ", "+")
     geocode_response = HTTParty.get(
       "http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=#{location}"
@@ -20,9 +20,6 @@ class SearchController < ApplicationController
     )["results"].to_json
 
     render :results
-  end
-
-  def results
   end
 
 end

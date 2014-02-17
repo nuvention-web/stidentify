@@ -1,6 +1,6 @@
 <div class="signup-background">
 
-  <%= form_tag search_create_user_path, class: "form-horizontal search" do %>
+  <%= form_tag search_results_user_path, method: "get", class: "form-horizontal search" do %>
     <%= label_tag :radius, "within" %>
     <%= select_tag :radius, options_for_select(["10 miles", "25 miles", "50 miles", "100 miles"], "25 miles") %>
     <br/>
