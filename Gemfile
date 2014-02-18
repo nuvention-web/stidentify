@@ -14,6 +14,8 @@ group :test do
   gem 'rspec-retry'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'json'
 
 #HTTParty for simpler http request
