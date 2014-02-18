@@ -47,7 +47,7 @@ Stidentify::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf|jpg|png)$/
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]

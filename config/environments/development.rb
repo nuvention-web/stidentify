@@ -27,6 +27,6 @@ Stidentify::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf|jpg|png)$/
 
 end
