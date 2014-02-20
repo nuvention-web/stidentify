@@ -14,6 +14,13 @@ group :test do
   gem 'rspec-retry'
 end
 
+gem 'rails_12factor', group: :production
+
+gem 'json'
+
+#HTTParty for simpler http request
+gem 'httparty'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -32,7 +39,7 @@ gem 'sass-rails', '~> 4.0.0'
 # gem "sass", :require => 'sass'
 
 
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
 
 # gem 'haml-rails'
 
