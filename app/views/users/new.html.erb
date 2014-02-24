@@ -1,0 +1,28 @@
+<center><p class ="required-fields"><em>All fields below are required.</em>
+<br/>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong>
+
+</p></center>
+<div class="signup-background">
+  <%= form_for @user, class: "form-horizontal new-user" do |f| %>
+      
+      <%= f.text_field :first_name, placeholder: "First Name", class: "col-sm-2" %>
+      <%= f.text_field :last_name, placeholder: "Last Name", class: "col-sm-2" %>
+
+      <%= f.text_field :email, placeholder: "Email Address", class: "col-sm-2" %>
+
+      <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
+      <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "col-sm-2" %>
+
+      <br/>
+
+      <center>
+
+      <%= f.label :over_18, "I am over 18:", class: "over_18" %> &nbsp;&nbsp;
+      <%= f.check_box :over_18 %>
+      </center>
+      
+      <center>
+      <%= f.submit "Sign Up", class: "button turquoise middle col-sm-12" %>
+      </center>
+  <% end %>
+</div>
