@@ -3,19 +3,54 @@ a:hover {
 }
 
 .button {
-  margin-top: 1em;
 }
 
 .fullscreen-thing {
 	height: 100vh; 
 }
 
-.footer {
-  height: 20vh;
+.asses {
+  height: 10vh;
 }
 
 .almost-fullscreen {
-  height: 85vh;
+  height: 90vh;
+}
+
+.section-home {
+  padding-top: 130px;
+}
+
+.section-home h1 {
+  color: #b61f1f;
+}
+
+.section-home span {
+  color: #b61f1f;
+}
+
+.phone {
+  position: relative;
+  bottom: 80px;
+  width: 360px;
+}
+
+.label-phone {
+  text-align: justify;
+}
+
+.learn-more {
+  position: relative;
+  top: 145px;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 100; 
+}
+
+.sign-up {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 100;
 }
 
 .dots-image {
@@ -52,7 +87,7 @@ a:hover {
   background-image: url(http://i.imgur.com/Cm8NUIv.png);
   position: absolute;
   width: 100vw;
-  height: 60vh;
+  height: 64vh;
   margin-top: 0vh;
 
 }
