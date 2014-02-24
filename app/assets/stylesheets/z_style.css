@@ -41,7 +41,7 @@ a:hover {
 
 .learn-more {
   position: relative;
-  top: 145px;
+  top: 180px;
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100; 
@@ -78,9 +78,36 @@ a:hover {
   content: "";
 }
 
-.title-small-margin h1 {
+.title-small-margin a {
   margin-bottom: 0px;
   padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #B61F1F;
+  font-size: 80px;
+}
+
+.title-small-margin:hover a {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #5C5E60;
+  font-size: 80px;
+}
+
+.title-small-margin a span {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #B61F1F;
+  font-size: 58px;
+}
+
+.title-small-margin:hover a span {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #5C5E60;
+  font-size: 58px;
 }
 
 .map-bg-image {

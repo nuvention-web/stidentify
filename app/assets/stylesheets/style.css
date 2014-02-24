@@ -702,12 +702,12 @@ body {
 	}
 
 	.button.learn {
-		background-color: rgba(182,31,31,0.7);
+		background-color: rgba(191,60,61,0.8);
 		color: #ffffff;
 	}
 
 	.button.learn:hover {
-		background-color: rgba(255,255,255,0.7);
+		background-color: rgba(255,255,255,0.9);
 		color: #b61f1f;
 	}
 	
