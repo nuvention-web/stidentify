@@ -19,6 +19,8 @@ class SearchController < ApplicationController
       "https://maps.googleapis.com/maps/api/place/nearbysearch/json?sensor=false&location=#{location}&radius=#{radius}&keyword=sexual+clinic&rankby=prominence&key=AIzaSyCjW847ACznKi7BuzYi_snkU5DeZFRfr3k"
     )["results"].to_json
 
+    binding.pry
+
     render :results
   end
 
