@@ -24,11 +24,11 @@ a:hover {
 }
 
 .asses {
-  height: 10vh;
+  height: 5vh;
 }
 
 .almost-fullscreen {
-  height: 90vh;
+  height: 95vh;
 }
 
 .section-home {
@@ -67,6 +67,14 @@ a:hover {
   font-size: 23px;
   font-weight: 100;
   margin-top: 35px;
+}
+
+.find-centers {
+  position: relative;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: 100;
+  margin-top: 35vh;
 }
 
 .counter-guy h1 {
@@ -207,7 +215,7 @@ input {
 
 .new_user, .sign-in, .search {
   width: 20%;
-  margin: 2em auto 0 auto;
+  margin: 0em auto 0 auto;
 }
 
 .over_18 {
