@@ -12,7 +12,7 @@ a:hover {
 }
 
 .margin-pitch {
-  margin-top: 80px;
+  margin-top: 65px;
 }
 
 .problem-title {
@@ -32,7 +32,7 @@ a:hover {
 }
 
 .section-home {
-  padding-top: 130px;
+  padding-top: 110px;
 }
 
 .section-home h1 {
@@ -55,10 +55,23 @@ a:hover {
 
 .learn-more {
   position: relative;
-  top: 180px;
+  top: 223px;
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100; 
+}
+
+.get-protected {
+  position: relative;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: 100;
+  margin-top: 35px;
+}
+
+.counter-guy h1 {
+  font-size: 52px;
+  margin: 0px;
 }
 
 .sign-up {
@@ -77,6 +90,11 @@ a:hover {
 }
 
 .title-small-margin {
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+
+.title-small-margin h1 {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
