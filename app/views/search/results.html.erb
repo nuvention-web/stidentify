@@ -16,6 +16,7 @@
 
 <script>
   window.onload = function() {
-    searchResults($.parseJSON(<%= @places_response.to_json.html_safe %>), <%= @latlng["lat"] %>, <%= @latlng["lng"] %>);
+    searchResults("<%= @location %>");
+    // searchResults($.parseJSON(<%= @places_response.to_json.html_safe %>), <%= @location %>);
   }
 </script>

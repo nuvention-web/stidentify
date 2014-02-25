@@ -16,6 +16,8 @@ end
 
 gem 'rails_12factor', group: :production
 
+gem 'binding_of_caller'
+
 gem 'json'
 
 #HTTParty for simpler http request

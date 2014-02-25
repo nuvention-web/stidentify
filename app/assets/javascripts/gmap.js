@@ -1,21 +1,58 @@
 var openedInfoWindow = null;
 
-function searchResults(places, lat, lng) {
+function initializeMaps(user) {
 
-  var myLatLng = new google.maps.LatLng(lat, lng)
-  var mapOptions = {
-    zoom: 10,
-    center: myLatLng
-  }
+  $('.search').on("submit", function(e) {
+    e.preventDefault();
 
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    gcode($('#location').val(), user);
 
-  console.log(places);
-
-  for(var i=0; i<places.length; i++) {
-    addMarker(places[i], map);
-  }
+    // $.post(
+    //   "/users/" + user + "/search/create",
+    //   {location: geocode($('#location').val())})
+    //   .done(function(response){
+    //     console.log(response)
+    //   })
+  })
 }
+
+function searchResults(location) {
+
+  // var myLatLng = new google.maps.LatLng(lat, lng)
+  // var mapOptions = {
+  //   zoom: 10,
+  //   center: myLatLng
+  // }
+
+  // var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  // for(var i=0; i<places.length; i++) {
+  //   addMarker(places[i], map);
+  // }
+
+  gcode(location);
+}
+
+function gcode(location, user) {
+  var geocoder = new google.maps.Geocoder();
+
+  geocoder.geocode({"address": location}, function(results, status){
+    createSearch(results[0].geometry.location, user);
+  });
+}
+
+function createSearch(location, user){
+  $.ajax({ 
+      url: "/users/" + user + "/search/create",
+      type: 'POST',
+      data: "info=" + location + $('#radius').val(),
+      success: function(response) {
+        $('#someDiv').html(response);
+      }
+    });
+
+}
+
 
 function addMarker(place, map){
   var reference = place["reference"]
