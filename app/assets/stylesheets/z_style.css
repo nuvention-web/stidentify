@@ -2,17 +2,174 @@ a:hover {
   text-decoration: none;
 }
 
+.left { text-align: left; }
+
+.center { text-align: center; }
+
+.right { text-align: right; }
+
 .button {
-  margin-top: 1em;
+}
+
+.margin-pitch {
+  margin-top: 65px;
+}
+
+.problem-title {
+  margin-bottom: 50px;
 }
 
 .fullscreen-thing {
 	height: 100vh; 
 }
 
+.asses {
+  height: 10vh;
+}
+
+.almost-fullscreen {
+  height: 90vh;
+}
+
+.section-home {
+  padding-top: 110px;
+}
+
+.section-home h1 {
+  color: #b61f1f;
+}
+
+.section-home span {
+  color: #b61f1f;
+}
+
+.phone {
+  position: relative;
+  bottom: 80px;
+  width: 360px;
+}
+
+.label-phone {
+  text-align: justify;
+}
+
+.learn-more {
+  position: relative;
+  top: 223px;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 100; 
+}
+
+.get-protected {
+  position: relative;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: 100;
+  margin-top: 35px;
+}
+
+.counter-guy h1 {
+  font-size: 52px;
+  margin: 0px;
+}
+
+.sign-up {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.dots-image {
+  background-image: url(http://i.imgur.com/HDud6FX.png);
+  position: absolute;
+  width: 300px;
+  height: 66px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.title-small-margin {
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+
+.title-small-margin h1 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.title-small-margin:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -7%;
+  width: 14%;
+  height: 0px;
+  background-color: #ececec;
+  content: "";
+}
+
+.title-small-margin a {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #B61F1F;
+  font-size: 80px;
+}
+
+.span-thing h2 span {
+  color: #B61F1F;
+}
+
+.span-thing h1 span {
+  color: #B61F1F;
+}
+
+.title-small-margin:hover a {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #5C5E60;
+  font-size: 80px;
+}
+
+.title-small-margin a span {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #B61F1F;
+  font-size: 58px;
+}
+
+.title-small-margin:hover a span {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #5C5E60;
+  font-size: 58px;
+}
+
+.map-bg-image {
+  background-image: url(http://i.imgur.com/Cm8NUIv.png);
+  position: absolute;
+  width: 100vw;
+  height: 64vh;
+  margin-top: 0vh;
+
+}
+
+.fw {
+      padding: 0 0 0 0;
+    }
+
 .gmap {
   width: 400px;
   margin-top: 5em;
+}
+
+.problem-section {
+  margin: 0;
 }
 
 .header2 {
