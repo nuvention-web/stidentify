@@ -43,7 +43,7 @@
 					<div class="counter-guy col-xs-12 center">
 	
 					<h1 class="counter-real"><%= ((Time.now.seconds_since_midnight)*0.63419583967).to_i %></h1>
-					<h2><b>new</b><br><span>Sexually Transmitted Infections</span><br>in America, today.</h2>
+					<h2>new<br><span>Sexually Transmitted Infections</span><br>in America, today.</h2>
 					<a href="#about"><button class="learn-more button learn">Learn More</button></a>
 
 					</div>
@@ -77,10 +77,10 @@
 
 					<div class="col-md-4 span-thing opacity center column3">
 						<hgroup class="section-title title-small-margin">
-							<h1><a href="/static_pages/resources" target="_blank">65</a></h1>
+							<h1><a href="/static_pages/resources" target="_blank">110</a></h1>
 						</hgroup>
 
-						<h2>million Americans are <br> living with an <span>incurable STI</span></h2>
+						<h2>million Americans are <br> living with an <span>STI</span></h2>
 					</div>
 
 					<div class="col-md-4 span-thing opacity center column3">
@@ -88,7 +88,7 @@
 							<h1><a href="/static_pages/resources" target="_blank">1<span> in </span>4</a></h1>						
 						</hgroup>
 
-						<h2>sexually active Americans <br>have an STI <span>and don't know it</span></h2>
+						<h2>sexually active Americans <br>have an STI <span>but don't know</span></h2>
 					</div>
 
 					<div class="col-md-4 opacity span-thing center column3">
@@ -168,7 +168,7 @@
 							Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? 
 						</p> -->
 						<div class="center">
-						<h3>Book Tests<br><br>Upload Results<br><br>Compare<br><br>Be Safe!</h3>
+						<h3>Book Tests<br><br>Upload Results<br><br>Compare<br><br>Be Safe</h3>
 					</div>
 
 									
@@ -220,7 +220,7 @@
 
 				</div>
 
-				<!-- <center><p>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong></p> -->
+				<center><p>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong></p></center>
 				
 
 				<div class="signup-background">
@@ -232,18 +232,18 @@
       <%= f.text_field :email, placeholder: "Email Address", class: "col-sm-2" %>
 
       <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
-      <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", class: "col-sm-2" %>
+      <%= f.password_field :password_confirmation, placeholder: "Password Again", class: "col-sm-2" %>
 
       <br/>
 
-      <center>
+      <!-- <center>
 
       <%= f.label :over_18, "I am over 18:", class: "over_18" %> &nbsp;&nbsp;
       <%= f.check_box :over_18 %>
-      </center>
+      </center> -->
       
       <center>
-      <%= f.submit "Sign Up", class: "button sign-up turquoise middle col-sm-12" %>
+      <%= f.submit "Sign Up", class: "button sign-up turquoise middle" %>
       </center>
   <% end %>
 </div>
@@ -323,6 +323,17 @@
 <!-- - - - - - - - - - - - - end Wrapper - - - - - - - - - - - - - - - -->
 
 <script>window.onload = function(){ startCounter() } </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48438704-1', 'stidentify.com');
+  ga('send', 'pageview');
+
+</script>
 
 <!--/
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

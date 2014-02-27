@@ -12,7 +12,7 @@ a:hover {
 }
 
 .margin-pitch {
-  margin-top: 65px;
+  margin-top: 2.3vmax;
 }
 
 .problem-title {
@@ -32,7 +32,7 @@ a:hover {
 }
 
 .section-home {
-  padding-top: 110px;
+  padding-top: 0px;
 }
 
 .section-home h1 {
@@ -55,7 +55,7 @@ a:hover {
 
 .learn-more {
   position: relative;
-  top: 223px;
+  top: 13.5vmax;
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100; 
@@ -66,7 +66,7 @@ a:hover {
   font-family: "Roboto";
   font-size: 23px;
   font-weight: 100;
-  margin-top: 35px;
+  margin-top: 1.6vmax;
 }
 
 .find-centers {
@@ -75,6 +75,10 @@ a:hover {
   font-size: 23px;
   font-weight: 100;
   margin-top: 35vh;
+}
+
+.counter-guy {
+  margin-top: 9vmax;
 }
 
 .counter-guy h1 {
@@ -86,6 +90,7 @@ a:hover {
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100;
+  width: 30vmax;
 }
 
 .dots-image {
@@ -214,7 +219,7 @@ input {
 }
 
 .new_user, .sign-in, .search {
-  width: 20%;
+  width: 30vmax;
   margin: 0em auto 0 auto;
 }
 
