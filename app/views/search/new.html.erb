@@ -1,4 +1,6 @@
 <div class="signup-background">
+  
+  <%= @places %>
 
   <%= form_tag search_results_user_path, method: "get", class: "form-horizontal search" do %>
     <%= label_tag :radius, "within" %>
@@ -13,7 +15,7 @@
 </div>
 
 <script>
-  // window.onload = function(){
-  //   initializeMaps();
-  // }
+  window.onload = function(){
+    initializeMaps(<%= params[:id] %>);
+  }
 </script>

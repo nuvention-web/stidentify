@@ -144,10 +144,10 @@ a:hover {
 	color: #B61F1F;
 }
 
-.not-ie a {
+/*.not-ie a {
 	-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
 			transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
-}
+}*/
 
 img {
     border: 0;
@@ -1401,7 +1401,7 @@ body {
 				filter: alpha(opacity = 60);				
 			}
 		
-			.parallax-bg-1 .full-bg-image { background-image: url(http://www.marriagefamilycenter.com/wp-content/uploads/2013/11/holding-hands.jpg); }
+			.parallax-bg-1 .full-bg-image { background-image: url(http://i.imgur.com/6HfjLmH.jpg); }
 			.parallax-bg-2 .full-bg-image { background-image: url(parallax/parallax-2.jpg); }
 			.parallax-bg-3 .full-bg-image { background-image: url(parallax/parallax-3.jpg); }
 			.parallax-bg-4 .full-bg-image { background-image: url(parallax/parallax-4.jpg); }
