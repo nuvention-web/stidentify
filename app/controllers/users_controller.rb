@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:password_confirmation]
 
     if @user.save
+      UserMailer.signup(@user).deliver
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
