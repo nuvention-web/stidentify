@@ -27,7 +27,10 @@
 </div>
 
 <script>
-  window.onload = function(){
+  $(document).on('page:load', function(){
     initializeMaps(<%= params[:id] %>);
-  }
+  })
+  // window.onload = function(){
+  //   initializeMaps(<%= params[:id] %>);
+  // }
 </script>
