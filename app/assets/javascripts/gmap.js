@@ -48,7 +48,6 @@ function createSearch(location, user){
       data: "info=" + location + $('#radius').val(),
       success: function(response) {
         var results = $.parseJSON(response);
-        console.log(results);
         $('.content-box').html("");
         searchResults(results);
       }
