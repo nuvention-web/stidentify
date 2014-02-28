@@ -17,6 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
+  username: bradpuder
   database: stidentify_development
   pool: 5
 

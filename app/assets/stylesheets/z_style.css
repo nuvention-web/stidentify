@@ -171,10 +171,6 @@ a:hover {
       padding: 0 0 0 0;
     }
 
-.gmap {
-  width: 400px;
-  margin-top: 5em;
-}
 
 .problem-section {
   margin: 0;
@@ -208,10 +204,6 @@ input {
 	color: #ffffff;
 }
 
-#map {
-  width: 400px;
-  height: 400px;
-}
 
 .new_user, .sign-in, .search {
   width: 20%;
@@ -228,11 +220,54 @@ input {
 }
 
 .search {
-  margin-top: 8em;
+  margin-top: 6em;
 }
 
 .sign-in {
   margin-top: 12em;
 }
 
+.gmap-button{
+  padding: 0.2em 0.7em;
+  border-radius: 0.3em;
+  margin-top: 0.5em;
+  font-size: 12px;
+}
+
+.content-box {
+  float: left;
+  margin-left: 10em;
+  height: 500px;
+  overflow: auto;
+}
+
+.gmap-box {
+  margin-top: 3em;
+}
+
+.gmap {
+  float: right;
+  width: 600px;
+  margin-right: 10em;
+}
+
+#map {
+  width: 600px;
+  height: 500px;
+}
+
+.content-box p{
+  font-size: 12px;
+  text-align: left;
+  padding-left: 1em;
+  width: 300px;
+}
+
+.content-active{
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+.content-box p:hover{
+  background-color: rgba(200, 200, 200, 0.2);
+}
 

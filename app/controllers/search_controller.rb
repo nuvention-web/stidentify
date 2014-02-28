@@ -16,16 +16,21 @@ class SearchController < ApplicationController
     @places = []
 
     places_response.each do |place|
-      place["name"]
-      place["vicinity"]
-      place["reference"]
 
       response = HTTParty.get("https://maps.googleapis.com/maps/api/place/details/json?reference=#{place["reference"]}&sensor=false&key=AIzaSyCjW847ACznKi7BuzYi_snkU5DeZFRfr3k")
       
       @places << {phone: response["result"]["formatted_phone_number"],
                   name: response["result"]["name"],
                   website: response["result"]["website"],
-                  address: response["result"]["formatted_address"]}
+                  address: response["result"]["formatted_address"].split(",").first,
+                  city: response["result"]["formatted_address"].split(", ")[1] + ", " + response["result"]["formatted_address"].split(", ")[2] ,
+                  lat: place["geometry"]["location"]["lat"],
+                  lng: place["geometry"]["location"]["lng"]
+                }
+    end
+
+    respond_to do |format|
+      format.js { render :json => @places}
     end
 
   end
