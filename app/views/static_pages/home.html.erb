@@ -211,7 +211,7 @@
 				
 
 				<div class="signup-background">
-  <%= form_for User.new, class: "form-horizontal new-user" do |f| %>
+  <%= form_for User.new, url: users_path, class: "form-horizontal new-user" do |f| %>
       
       <%= f.text_field :first_name, placeholder: "First Name", class: "col-sm-2" %>
       <%= f.text_field :last_name, placeholder: "Last Name", class: "col-sm-2" %>
