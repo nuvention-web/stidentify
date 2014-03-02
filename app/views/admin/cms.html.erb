@@ -1,0 +1,18 @@
+<br/>
+<br/>
+<br/>
+<h1>Total Signups: <strong><%= @users.length %></strong></h1>
+<table class="table">
+  <tr>
+    <th style="width:150px">First Name</th>
+    <th style="width:150px">Last Name</th>
+    <th style="width:150px">Email Address</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>
