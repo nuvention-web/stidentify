@@ -15,6 +15,18 @@ a:hover {
   margin-top: 2.3vmax;
 }
 
+.social-media {
+  text-align: right;
+}
+
+.social-media span {
+  color: #b61f1f;
+}
+
+.social-media-row {
+  margin-right: 0px;
+}
+
 .problem-title {
   margin-bottom: 50px;
 }
@@ -167,7 +179,7 @@ a:hover {
   background-image: url(http://i.imgur.com/Cm8NUIv.png);
   position: absolute;
   width: 100vw;
-  height: 64vh;
+  height: 69vh;
   margin-top: 0vh;
 
 }
