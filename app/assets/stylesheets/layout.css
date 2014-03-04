@@ -82,7 +82,7 @@
 
 					.navigation ul li > a {
 						padding: 10px 15px;
-						background-color: #00c2a9;
+						background-color: #b61f1f;
 						color: #fff;
 						cursor: pointer;
 						font-weight: 400;
@@ -97,7 +97,7 @@
 					.navigation ul .current_page_parent > a,
 					.navigation ul .current_page_ancestor > a { 
 						background-color: #fff;
-						 color: #00c2a9;
+						 color: #b61f1f;
 					}
 
 					.navigation ul a {
@@ -113,7 +113,7 @@
 					.navigation ul .current-menu-ancestor > a:after,
 					.navigation ul .current_page_item > a:after,
 					.navigation ul .current_page_parent > a:after,
-					.navigation ul .current_page_ancestor > a:after { color: #00c2a9; }
+					.navigation ul .current_page_ancestor > a:after { color: #b61f1f; }
 
 			/* Dropdown */
 			
@@ -133,14 +133,14 @@
 				.navigation ul ul .current-menu-ancestor > a,
 				.navigation ul ul .current_page_item > a,
 				.navigation ul ul .current_page_parent > a,
-				.navigation ul ul .current_page_ancestor > a { color: #00c2a9; }
+				.navigation ul ul .current_page_ancestor > a { color: #b61f1f; }
 
 				.navigation ul ul .current-menu-item.rightarrowclass > a:after,
 				.navigation ul ul .current-menu-parent.rightarrowclass > a:after,
 				.navigation ul ul .current-menu-ancestor.rightarrowclass > a:after,
 				.navigation ul ul .current_page_item.rightarrowclass > a:after,
 				.navigation ul ul .current_page_parent.rightarrowclass > a:after,
-				.navigation ul ul .current_page_ancestor.rightarrowclass > a:after { color: #00c2a9; }
+				.navigation ul ul .current_page_ancestor.rightarrowclass > a:after { color: #b61f1f; }
 				
 				.navigation ul ul .rightarrowclass > a:after { content: '\e8ba'; }	
 				
