@@ -273,6 +273,12 @@ input {
   height: 500px;
 }
 
+img {
+  max-width: 100%;
+}
+
+.gmnoprint img { max-width: none; }
+
 .content-box p{
   font-size: 12px;
   text-align: left;

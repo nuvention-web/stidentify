@@ -14,19 +14,7 @@ class SearchController < ApplicationController
     )["results"]
 
 
-    def radians(deg)
-      pi = Math::PI
-      deg.to_f * pi / 180.0
-    end
-
-    #latlng is user's latitude and longitude
-
-
-
-    def distance(latlng, lat, lng)
-      ( 6371.0 * Math.acos( Math.cos( radians(latlng.first) ) * Math.cos( radians( lat ) ) * Math.cos( radians( lng ) - radians(latlng.last) ) + Math.sin( radians(latlng.first) ) * Math.sin( radians( lat ) ) ) )
-    end
-
+    
     clinics = []
 
 
@@ -59,10 +47,13 @@ class SearchController < ApplicationController
                   fees: clinic.fees,
                   hours: clinic.hours,
                   distance: c.last}
+    end
 
-      respond_to do |format|
-        format.js { render :json => @places }
-      end
+    # binding.pry
+
+    respond_to do |format|
+      format.js { render :json => @places }
+    end
 
     # places_response.each do |place|
 
@@ -83,7 +74,7 @@ class SearchController < ApplicationController
     # end
 
 
-    binding.pry
+    # binding.pry
 
 
 
