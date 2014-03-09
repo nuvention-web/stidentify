@@ -11,6 +11,24 @@ class UsersController < ApplicationController
     @user.password = params[:password]
     @user.password_confirmation = params[:password_confirmation]
 
+    @user.stid = User.assign_stid
+
+    encoded_stid = { stid: @user.stid }
+    encoded_stid = Base64.encode64(encoded_stid.to_json).delete("\n")
+
+    response = HTTParty.post(
+      "https://api.truevault.com/v1/vaults/#{ENV['TV_VAULT_ID']}/documents",
+      basic_auth: {username: ENV['TV_API_KEY']},
+      body: {
+        document: encoded_stid,
+        schema_id: ENV['TV_SCHEMA_ID']
+      }
+    )
+
+    binding.pry
+
+    @user.document_id = response["document_id"]
+
     if @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user)

@@ -7,26 +7,79 @@ class SearchController < ApplicationController
     latlng = params[:info].split(")").first.delete("(").split(", ")
     radius = params[:info].split(")").last
     miles = radius.split(" ").first.to_i
-    radius = miles * 1609
+    radius = miles * 1609.34
 
     places_response = HTTParty.get(
       "https://maps.googleapis.com/maps/api/place/nearbysearch/json?sensor=false&location=#{latlng.first},#{latlng.last}&radius=#{radius}&keyword=sexual+clinic&rankby=prominence&key=AIzaSyCjW847ACznKi7BuzYi_snkU5DeZFRfr3k"
     )["results"]
 
+
+    def radians(deg)
+      pi = Math::PI
+      deg.to_f * pi / 180.0
+    end
+
+    #latlng is user's latitude and longitude
+
+
+
+    def distance(latlng, lat, lng)
+      ( 6371.0 * Math.acos( Math.cos( radians(latlng.first) ) * Math.cos( radians( lat ) ) * Math.cos( radians( lng ) - radians(latlng.last) ) + Math.sin( radians(latlng.first) ) * Math.sin( radians( lat ) ) ) )
+    end
+
+    clinics = []
+
+
+    Clinic.all.each do |clinic|
+
+      d = distance(latlng, clinic.lat, clinic.lng)
+
+      if d <= (radius.to_f / 1000.0)
+
+        clinics << [clinic, (d * 1000.0 / 1609.34 ) ]
+
+      end
+
+    end
+
+    @clinics = clinics.sort_by { |c| c.last }
+
     @places = []
 
-    places_response.each do |place|
-      place["name"]
-      place["vicinity"]
-      place["reference"]
+    @clinics.each do |c|
 
-      response = HTTParty.get("https://maps.googleapis.com/maps/api/place/details/json?reference=#{place["reference"]}&sensor=false&key=AIzaSyCjW847ACznKi7BuzYi_snkU5DeZFRfr3k")
-      
-      @places << {phone: response["result"]["formatted_phone_number"],
-                  name: response["result"]["name"],
-                  website: response["result"]["website"],
-                  address: response["result"]["formatted_address"]}
+      clinic = c.first
+
+      @places << {phone: clinic.phone,
+                  name: clinic.name,
+                  website: clinic.website,
+                  address: clinic.address,
+                  fees: clinic.fees,
+                  hours: clinic.hours,
+                  distance: c.last}
     end
+
+
+    binding.pry
+
+
+
+
+
+    # @places = []
+
+    # places_response.each do |place|
+    #   place["name"]
+    #   place["vicinity"]
+    #   place["reference"]
+
+    #   response = HTTParty.get("https://maps.googleapis.com/maps/api/place/details/json?reference=#{place["reference"]}&sensor=false&key=AIzaSyCjW847ACznKi7BuzYi_snkU5DeZFRfr3k")
+      
+    #   @places << {phone: response["result"]["formatted_phone_number"],
+    #               name: response["result"]["name"],
+    #               website: response["result"]["website"],
+    #               address: response["result"]["formatted_address"]}
+    # end
 
   end
 
