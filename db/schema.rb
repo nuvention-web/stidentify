@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140309032540) do
     t.string "hours"
     t.string "lat"
     t.string "lng"
+
   end
 
   create_table "users", force: true do |t|

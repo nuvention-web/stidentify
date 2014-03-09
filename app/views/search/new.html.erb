@@ -12,10 +12,25 @@
 
   <% end %>
 
+<center>
+  <div class="load-spin"></div>
+  <div class="gmap-box">
+    <div class="content-box"></div>
+    <div class="gmap">
+      <div id="map">
+      </div>
+    </div>
+  </div>
+</center>
+
+
 </div>
 
 <script>
-  window.onload = function(){
+  $(document).on('page:load', function(){
     initializeMaps(<%= params[:id] %>);
-  }
+  })
+  // window.onload = function(){
+  //   initializeMaps(<%= params[:id] %>);
+  // }
 </script>

@@ -16,21 +16,19 @@ function initializeMaps(user) {
   })
 }
 
-function searchResults(location) {
+function searchResults(places) {
 
-  // var myLatLng = new google.maps.LatLng(lat, lng)
-  // var mapOptions = {
-  //   zoom: 10,
-  //   center: myLatLng
-  // }
+  var myLatLng = new google.maps.LatLng(latlng.d, latlng.e)
+  var mapOptions = {
+    zoom: 10,
+    center: myLatLng
+  }
 
-  // var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  // for(var i=0; i<places.length; i++) {
-  //   addMarker(places[i], map);
-  // }
-
-  gcode(location);
+  for(var i=0; i < places.length; i++) {
+    addMarker(places[i], map, i);
+  }
 }
 
 function gcode(location, user) {
@@ -42,22 +40,29 @@ function gcode(location, user) {
 }
 
 function createSearch(location, user){
+  latlng = location;
+
   $.ajax({ 
       url: "/users/" + user + "/search/create",
       type: 'POST',
       data: "info=" + location + $('#radius').val(),
       success: function(response) {
-        $('#someDiv').html(response);
+        var results = $.parseJSON(response);
+        $('.content-box').html("");
+        searchResults(results);
       }
     });
 
+  target = document.querySelector('.load-spin');
+  var spinner = new Spinner().spin(target);
+  setTimeout(function(){ spinner.stop() }, 4000);
 }
 
 
-function addMarker(place, map){
+function addMarker(place, map, i){
   var reference = place["reference"]
 
-  var latLng = new google.maps.LatLng(place["geometry"]["location"]["lat"], place["geometry"]["location"]["lng"])
+  var latLng = new google.maps.LatLng(place["lat"], place["lng"])
 
 
   var marker = new google.maps.Marker({
@@ -66,8 +71,9 @@ function addMarker(place, map){
       title: place["name"]
   });
 
-  var contentString = "<p><strong>name:</strong> " + place["name"] + "</p>" +
-                      "<p><strong>address:</strong> " + place["vicinity"] + "</p>"
+  var website = "<a href='" + place["website"] + "'><button class='button turquoise gmap-button'>Book Now</button></a>"
+
+  var contentString = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["city"] + "<br/>" + place["phone"] + "<br/>" + website + "</p>"
 
   var infoWindow = new google.maps.InfoWindow({
         content: contentString
@@ -77,7 +83,22 @@ function addMarker(place, map){
     if (openedInfoWindow != null) openedInfoWindow.close();
     infoWindow.open(map,marker);
     openedInfoWindow = infoWindow;
+    var id = $($.parseHTML(openedInfoWindow.content)[0]).attr('id')
+    $(".content-active").toggleClass("content-active");
+    $('#' + id).toggleClass("content-active");
   });
+
+  var $info = $(contentString);
+
+  $info.on("click", function(){
+    $(".content-active").toggleClass("content-active");
+    $(this).toggleClass("content-active");
+    if (openedInfoWindow != null) openedInfoWindow.close();
+    infoWindow.open(map,marker);
+    openedInfoWindow = infoWindow;
+  });
+
+  $('.content-box').append($info);
 
 }
 

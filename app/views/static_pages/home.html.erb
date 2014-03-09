@@ -211,7 +211,7 @@
 				
 
 				<div class="signup-background">
-  <%= form_for User.new, class: "form-horizontal new-user" do |f| %>
+  <%= form_for User.new, url: users_path, class: "form-horizontal new-user" do |f| %>
       
       <%= f.text_field :first_name, placeholder: "First Name", class: "col-sm-2" %>
       <%= f.text_field :last_name, placeholder: "Last Name", class: "col-sm-2" %>
@@ -290,11 +290,17 @@
 
 		<section class="asses">
 
-			<div class="container">
+			<div class="container social-media-row">
 
 				<div class="row">
 
-					
+					<div class="col-md-6"></div>
+
+					<div class="col-md-6 social-media">
+
+						<h4>Follow our progress on <a href="http://on.fb.me/1fwLfP9" target="_blank"><span>Facebook</span></a> or join the conversation on <a href="http://bit.ly/1hwwD0D" target="_blank"><span>Twitter</span></a>.</h4>
+
+					</div>
 
 				</div>
 			
