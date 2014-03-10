@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       }
     )
 
-    binding.pry
+    # binding.pry
 
     @user.document_id = response["document_id"]
 
