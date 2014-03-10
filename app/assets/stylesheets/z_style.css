@@ -2,17 +2,195 @@ a:hover {
   text-decoration: none;
 }
 
+.left { text-align: left; }
+
+.center { text-align: center; }
+
+.right { text-align: right; }
+
 .button {
-  margin-top: 1em;
+}
+
+.margin-pitch {
+  margin-top: 2.3vmax;
+}
+
+.social-media {
+  text-align: right;
+}
+
+.social-media span {
+  color: #b61f1f;
+}
+
+.social-media-row {
+  margin-right: 0px;
+}
+
+.problem-title {
+  margin-bottom: 50px;
 }
 
 .fullscreen-thing {
 	height: 100vh; 
 }
 
-.gmap {
-  width: 400px;
-  margin-top: 5em;
+.asses {
+  height: 5vh;
+}
+
+.almost-fullscreen {
+  height: 95vh;
+}
+
+.section-home {
+  padding-top: 0px;
+}
+
+.section-home h1 {
+  color: #b61f1f;
+}
+
+.section-home span {
+  color: #b61f1f;
+}
+
+.phone {
+  position: relative;
+  bottom: 80px;
+  width: 360px;
+}
+
+.label-phone {
+  text-align: justify;
+}
+
+.learn-more {
+  position: relative;
+  top: 13.5vmax;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 100; 
+}
+
+.get-protected {
+  position: relative;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: 100;
+  margin-top: 1.6vmax;
+}
+
+.find-centers {
+  position: relative;
+  font-family: "Roboto";
+  font-size: 23px;
+  font-weight: 100;
+  margin-top: 35vh;
+}
+
+.counter-guy {
+  margin-top: 9vmax;
+}
+
+.counter-guy h1 {
+  font-size: 52px;
+  margin: 0px;
+}
+
+.sign-up {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 100;
+  width: 30vmax;
+}
+
+.dots-image {
+  background-image: url(http://i.imgur.com/HDud6FX.png);
+  position: absolute;
+  width: 300px;
+  height: 66px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.title-small-margin {
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}
+
+.title-small-margin h1 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.title-small-margin:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -7%;
+  width: 14%;
+  height: 0px;
+  background-color: #ececec;
+  content: "";
+}
+
+.title-small-margin a {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #B61F1F;
+  font-size: 80px;
+}
+
+.span-thing h2 span {
+  color: #B61F1F;
+}
+
+.span-thing h1 span {
+  color: #B61F1F;
+}
+
+.title-small-margin:hover a {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #5C5E60;
+  font-size: 80px;
+}
+
+.title-small-margin a span {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #B61F1F;
+  font-size: 58px;
+}
+
+.title-small-margin:hover a span {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-transform: lowercase;
+  color: #5C5E60;
+  font-size: 58px;
+}
+
+.map-bg-image {
+  background-image: url(http://i.imgur.com/Cm8NUIv.png);
+  position: absolute;
+  width: 100vw;
+  height: 69vh;
+  margin-top: 0vh;
+
+}
+
+.fw {
+      padding: 0 0 0 0;
+    }
+
+
+.problem-section {
+  margin: 0;
 }
 
 .header2 {
@@ -43,14 +221,10 @@ input {
 	color: #ffffff;
 }
 
-#map {
-  width: 400px;
-  height: 400px;
-}
 
 .new_user, .sign-in, .search {
-  width: 20%;
-  margin: 2em auto 0 auto;
+  width: 30vmax;
+  margin: 0em auto 0 auto;
 }
 
 .over_18 {
@@ -63,11 +237,54 @@ input {
 }
 
 .search {
-  margin-top: 8em;
+  margin-top: 6em;
 }
 
 .sign-in {
   margin-top: 12em;
 }
 
+.gmap-button{
+  padding: 0.2em 0.7em;
+  border-radius: 0.3em;
+  margin-top: 0.5em;
+  font-size: 12px;
+}
+
+.content-box {
+  float: left;
+  margin-left: 10em;
+  height: 500px;
+  overflow: auto;
+}
+
+.gmap-box {
+  margin-top: 3em;
+}
+
+.gmap {
+  float: right;
+  width: 600px;
+  margin-right: 10em;
+}
+
+#map {
+  width: 600px;
+  height: 500px;
+}
+
+.content-box p{
+  font-size: 12px;
+  text-align: left;
+  padding-left: 1em;
+  width: 300px;
+}
+
+.content-active{
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+.content-box p:hover{
+  background-color: rgba(200, 200, 200, 0.2);
+}
 

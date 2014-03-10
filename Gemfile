@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 group :test do
   # gem 'rack_session_access'
   gem 'rspec-rails'
@@ -15,6 +17,8 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
+
+gem 'binding_of_caller'
 
 gem 'json'
 

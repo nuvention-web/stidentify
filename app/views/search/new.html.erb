@@ -1,4 +1,6 @@
 <div class="signup-background">
+  
+  <%= @places %>
 
   <%= form_tag search_results_user_path, method: "get", class: "form-horizontal search" do %>
     <%= label_tag :radius, "within" %>
@@ -10,10 +12,25 @@
 
   <% end %>
 
+<center>
+  <div class="load-spin"></div>
+  <div class="gmap-box">
+    <div class="content-box"></div>
+    <div class="gmap">
+      <div id="map">
+      </div>
+    </div>
+  </div>
+</center>
+
+
 </div>
 
 <script>
+  $(document).on('page:load', function(){
+    initializeMaps(<%= params[:id] %>);
+  })
   // window.onload = function(){
-  //   initializeMaps();
+  //   initializeMaps(<%= params[:id] %>);
   // }
 </script>

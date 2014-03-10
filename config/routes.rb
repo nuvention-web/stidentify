@@ -1,7 +1,10 @@
 Stidentify::Application.routes.draw do
   root :to => "static_pages#home"
   get "static_pages/home"
-  get "static_pages/help"
+  get "static_pages/resources"
+
+  post "admin/cms", to: "admin#cms"
+  get "admin", to: "admin#sign_in"
   
 
   resources :users, except: [:index] do
