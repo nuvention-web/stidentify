@@ -38,6 +38,7 @@ class SearchController < ApplicationController
 
       clinic = c.first
 
+
       @places << {phone: clinic.phone,
                   name: clinic.name,
                   website: clinic.website,
@@ -46,7 +47,7 @@ class SearchController < ApplicationController
                   lng: clinic.lng,
                   fees: clinic.fees,
                   hours: clinic.hours,
-                  distance: c.last}
+                  distance: c.last.round(1)}
     end
 
     # binding.pry

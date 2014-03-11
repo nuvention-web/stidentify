@@ -27,7 +27,7 @@
         <li><%= link_to "Find Testing Center", search_new_user_path(current_user)%></li>
         <li><a href="#about">View Results</a></li>
         <li><a href="#team">Add Results</a></li>
-        <li><a href="#services">Compare</a></li>
+        <li><%= link_to "Compare", compare_user_path(current_user.id) %></li>
         <li><%= link_to 'Logout', session_path(current_user), :method => :delete %></li>
       </ul>
 

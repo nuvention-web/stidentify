@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
 
   def self.generate_stid
   	sample_set = (0..9).to_a + ("a".."z").to_a
+    sample_set.delete("o")
   	stid = []
   	6.times { stid << sample_set.sample }
   	stid.join("")

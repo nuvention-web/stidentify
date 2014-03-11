@@ -51,6 +51,25 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def compare
+    @current_user = current_user
+  end
+
+  def create_compare
+    user2 = User.find_by(stid: params[:stid].downcase)
+
+    if user2.nil?
+      redirect_to compare_user_path(current_user)
+    else
+      @status = current_user.compare_with(user2)
+
+      render :results
+    end
+  end
+
+  def results
+  end
+
   private
 
   def user_params
