@@ -7,6 +7,24 @@ a:hover {
   font-weight: 100;
 }
 
+.profile-page {
+  margin-top: 4em;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+.profile-page span {
+  color: #B61F1F;
+}
+
+.stid span {
+  color: #B61F1F;
+}
+
+.add-picture{
+  width: 370px;
+}
+
 .left { text-align: left; }
 
 .center { text-align: center; }
@@ -260,7 +278,7 @@ input {
 
 .content-box {
   float: left;
-  margin-left: 10em;
+  margin-left: 3em;
   height: 500px;
   width: 300px;
   overflow: auto;
@@ -272,12 +290,13 @@ input {
 
 .gmap {
   float: right;
-  width: 600px;
-  margin-right: 10em;
+  width: 60vw;
+  margin-right: 5em;
+  margin-bottom: 5vh;
 }
 
 #map {
-  width: 600px;
+  width: 60vw;
   height: 500px;
 }
 

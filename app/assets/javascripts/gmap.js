@@ -71,13 +71,13 @@ function addMarker(place, map, i){
       title: place["name"]
   });
 
-  var website = "<a href='" + place["website"] + "'><button class='button turquoise gmap-button'>Book Now</button></a>"
+  var website = "<a href='" + "http://" + place["website"] + "'><button class='button turquoise gmap-button'>Book Now</button></a>"
 
   /* sidepanel string */
   var contentString1 = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["phone"] + "<br/>" + website + "</p>"
 
   /* infowindow string */
-  var contentString2 = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["phone"] + "<br/>" + website + place["fees"] + "<br/>" + place["hours"] + "</p>"
+  var contentString2 = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["phone"] + "<br/>" + website + "<br/>" + place["hours"] + "</p>"
 
 
   var infoWindow = new google.maps.InfoWindow({
