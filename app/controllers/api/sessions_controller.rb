@@ -4,6 +4,7 @@ class Api::SessionsController < ApplicationController
   respond_to :json
 
   def create
+    puts "here"
     user = User.find_by(email: params["email"])
 
     if user && user.authenticate(params[:password])
