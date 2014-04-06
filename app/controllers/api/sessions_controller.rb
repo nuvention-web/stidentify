@@ -13,7 +13,7 @@ class Api::SessionsController < ApplicationController
       api_key = ApiKey.create
       api_key.user_id = user.id
       api_key.save
-      render json: {access_token: api_key.access_token, expires_at: api_key.expires_at, user_id: user.id, response: "success"}
+      render json: {access_token: api_key.access_token, expires_at: api_key.expires_at, user_id: user.id, response: "success", first_name: user.first_name}
     else
       render json: {response: "invalid"}
     end
