@@ -1,6 +1,8 @@
 class Api::MatchesController < ApplicationController
 
-before_filter :restrict_access
+skip_before_action :verify_authenticity_token
+before_action :cors_preflight_check
+after_action :cors_set_access_control_headers
 respond_to :json
 
 def new
