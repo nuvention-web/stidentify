@@ -16,10 +16,11 @@ group :test do
   gem 'rspec-retry'
 end
 
+gem 'rabl'
+gem 'oj'
+
 gem 'rails_12factor', group: :production
-
 gem 'binding_of_caller'
-
 gem 'json'
 
 #HTTParty for simpler http request

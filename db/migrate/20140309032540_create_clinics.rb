@@ -1,5 +1,6 @@
 class CreateClinics < ActiveRecord::Migration
   def change
+    drop_table :clinics
     create_table :clinics do |t|
     	t.string :name
     	t.string :address

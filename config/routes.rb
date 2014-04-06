@@ -19,4 +19,8 @@ Stidentify::Application.routes.draw do
   end
 
   resource :session
+
+  namespace :api do
+    resources :sessions
+  end
 end
