@@ -23,4 +23,6 @@ Stidentify::Application.routes.draw do
   namespace :api do
     resources :sessions
   end
+
+  match 'api/sessions', to: "api/sessions#create", via: [:options]
 end
