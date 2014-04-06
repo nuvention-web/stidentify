@@ -36,7 +36,7 @@ class SearchController < ApplicationController
   end
 
   def results
-    # @location = params[:location].split(" ").join("+")
+    @location = params[:location].split(" ").join("+")
 
     # # geocode_response = HTTParty.get(
     # #   "http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=#{location}"

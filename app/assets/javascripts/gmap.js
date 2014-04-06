@@ -10,11 +10,15 @@ function initializeMaps(user) {
     // $.post(
     //   "/users/" + user + "/search/create",
     //   {location: geocode($('#location').val())})
-    //   .done(function(response){
+    //   .done(function(response){ls
     //     console.log(response)
     //   })
   })
 }
+
+
+
+
 
 function searchResults(places) {
 
@@ -100,6 +104,12 @@ function addMarker(place, map, i){
 
   $('.content-box').append($info);
 
+}
+
+if (2 + 2) {
+  console.log(4);
+} else {
+  console.log("That's not true")
 }
 
 
