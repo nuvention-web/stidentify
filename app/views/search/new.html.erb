@@ -8,7 +8,7 @@
     <br/>
     <%= label_tag :location, "of" %>
     <%= text_field_tag :location, nil, placeholder: "Your Location", class: "col-sm-2" %>
-    <%= submit_tag "Search", class: "button turquoise middle col-sm-12" %>
+    <%= submit_tag "Search", class: "button search-button turquoise middle col-sm-12" %>
 
   <% end %>
 
@@ -28,7 +28,9 @@
 
 <script>
   $(document).on('page:load', function(){
+    console.log("HEY BUDDY");
     initializeMaps(<%= params[:id] %>);
+
   })
   // window.onload = function(){
   //   initializeMaps(<%= params[:id] %>);

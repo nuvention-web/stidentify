@@ -24,7 +24,7 @@ function searchResults(places) {
 
   var myLatLng = new google.maps.LatLng(latlng.d, latlng.e)
   var mapOptions = {
-    zoom: 10,
+    zoom: 13,
     center: myLatLng
   }
 
@@ -51,6 +51,7 @@ function createSearch(location, user){
       type: 'POST',
       data: "info=" + location + $('#radius').val(),
       success: function(response) {
+        console.log("THIS WORKS!");
         var results = $.parseJSON(response);
         $('.content-box').html("");
         searchResults(results);
@@ -68,19 +69,23 @@ function addMarker(place, map, i){
 
   var latLng = new google.maps.LatLng(place["lat"], place["lng"])
 
-
   var marker = new google.maps.Marker({
       position: latLng,
       map: map,
       title: place["name"]
   });
 
-  var website = "<a href='" + place["website"] + "'><button class='button turquoise gmap-button'>Book Now</button></a>"
+  var website = "<a href='" + "http://" + place["website"] + "'><button class='button turquoise gmap-button'>Book Now</button></a>"
 
-  var contentString = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["city"] + "<br/>" + place["phone"] + "<br/>" + website + "</p>"
+  /* sidepanel string */
+  var contentString1 = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["phone"] + "<br/>" + place["distance"] + " miles away<br/>" + website + "</p>"
+
+  /* infowindow string */
+  var contentString2 = "<p id='location_" + i + "'><strong>" + place["name"] + "</strong>"+ "<br/>" + place["address"] + "<br/>" + place["phone"] + "<br/>" + website + "<br/>" + place["distance"] + " miles away<br/>" + place["hours"] + "</p>"
+
 
   var infoWindow = new google.maps.InfoWindow({
-        content: contentString
+        content: contentString2
   });
 
   google.maps.event.addListener(marker, 'click', function (){
@@ -92,7 +97,7 @@ function addMarker(place, map, i){
     $('#' + id).toggleClass("content-active");
   });
 
-  var $info = $(contentString);
+  var $info = $(contentString1);
 
   $info.on("click", function(){
     $(".content-active").toggleClass("content-active");

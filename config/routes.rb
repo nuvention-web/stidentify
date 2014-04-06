@@ -12,6 +12,9 @@ Stidentify::Application.routes.draw do
       get "/search/new"
       post "/search/create"
       get "/search/results"
+      get "/compare", to: "users#compare"
+      post "/create_compare", to: "users#create_compare"
+      get "/results", to: "user#results"
     end
   end
 
