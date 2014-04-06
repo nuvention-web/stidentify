@@ -24,6 +24,15 @@ module Stidentify
     config.force_ssl = false
     config.ssl_options = {hsts: {expires: 3600}}
 
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', 
+            :headers => :any, 
+            :methods => [:get, :post, :delete, :put, :options]
+      end
+    end
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
