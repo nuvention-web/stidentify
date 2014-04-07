@@ -48,6 +48,7 @@
   <!-- HTML5 Shiv
   ================================================== -->
   <!-- <script src="javascripts/jquery.modernizr.js"></script> -->
+
   
 </head>
 
@@ -68,11 +69,24 @@
     <%= yield %>
 
     <script>
-    $.ajaxSetup({
+
+    window.onload = function(){
+      
+
+      
+      $.ajaxSetup({
         headers: {
           'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
         }
       });
 
+    }
+
+    // window.onunload = window.beforeonuload = function(){
+    //   return false;
+    // }; 
+
     </script>
+
+
   </body>
