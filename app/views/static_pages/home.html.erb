@@ -207,19 +207,19 @@
 
 				</div>
 
-				<center><p>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong></p></center>
+				<!-- <center><p>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong></p></center> -->
 				
 
 				<div class="signup-background">
   <%= form_for User.new, url: users_path, class: "form-horizontal new-user" do |f| %>
       
       <%= f.text_field :first_name, placeholder: "First Name", class: "col-sm-2" %>
-      <%= f.text_field :last_name, placeholder: "Last Name", class: "col-sm-2" %>
-
+<!--       <%= f.text_field :last_name, placeholder: "Last Name", class: "col-sm-2" %>
+ -->
       <%= f.text_field :email, placeholder: "Email Address", class: "col-sm-2" %>
 
-      <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
-      <%= f.password_field :password_confirmation, placeholder: "Password Again", class: "col-sm-2" %>
+    <!--   <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
+      <%= f.password_field :password_confirmation, placeholder: "Password Again", class: "col-sm-2" %> -->
 
       <br/>
 

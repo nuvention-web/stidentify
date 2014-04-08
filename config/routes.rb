@@ -3,6 +3,10 @@ Stidentify::Application.routes.draw do
 
   get "static_pages/home"
   get "static_pages/resources"
+  get "static_pages/thanks"
+
+  match "/thanks", to: "static_pages#thanks", via: [:get]
+  match "/logout", to: "sessions#destroy", via: [:get, :delete]
 
   post "admin/cms", to: "admin#cms"
   get "admin", to: "admin#sign_in"
