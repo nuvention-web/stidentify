@@ -42,12 +42,17 @@ a:hover {
   text-align: right;
 }
 
+.contact-us {
+  text-align: left;
+}
+
 .social-media span {
   color: #b61f1f;
 }
 
 .social-media-row {
-  margin-right: 0px;
+  margin: 5px;
+
 }
 
 .problem-title {
@@ -59,11 +64,15 @@ a:hover {
 }
 
 .asses {
-  height: 5vh;
+  height: 10vh;
 }
 
 .almost-fullscreen {
   height: 95vh;
+}
+
+.not-quite-fullscreen {
+  height: 90vh;
 }
 
 .section-home {
