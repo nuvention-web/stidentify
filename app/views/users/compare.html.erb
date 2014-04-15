@@ -1,0 +1,14 @@
+ <br/>
+ <br/>
+ <br/>
+
+
+
+ <%= form_tag create_compare_user_path, class: "form-horizontal sign-in" do %>
+
+  <h2>Your STId: <span style="color:#b61f1f"><%= current_user.stid.upcase %></span></h2>
+
+    <%= text_field_tag :stid, nil, placeholder: "Enter STId", class: "col-sm-2" %>
+    <%= submit_tag "Compare", class: "button turquoise middle search-button" %>
+
+  <% end %>

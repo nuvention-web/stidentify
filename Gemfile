@@ -16,10 +16,15 @@ group :test do
   gem 'rspec-retry'
 end
 
+#json templating for API
+gem 'rabl'
+gem 'oj'
+
+#set up http headers for CORS in Rack
+gem 'rack-cors', :require => 'rack/cors'
+
 gem 'rails_12factor', group: :production
-
 gem 'binding_of_caller'
-
 gem 'json'
 
 #HTTParty for simpler http request
@@ -41,6 +46,8 @@ gem 'pry-rails'
 gem 'sass-rails', '~> 4.0.0'
 
 # gem "sass", :require => 'sass'
+
+gem 'figaro'
 
 
 # gem 'bootstrap-sass'

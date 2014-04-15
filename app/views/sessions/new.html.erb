@@ -9,3 +9,23 @@
 
   <% end %>
 </div>
+
+<script>
+window.onload = function(){
+  console.log("test")
+
+  $.ajax({
+    headers: {          
+      Accept: "application/json; charset=utf-8",         
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    url: "/api/sessions",
+    type: "POST",
+    data: JSON.stringify({email:"brad@gmail.com", password:"bradley123"}),
+    dataType: "json",
+    success: function(data) {
+      console.log(data);
+    }
+  })
+}
+</script>

@@ -67,6 +67,9 @@ GEM
     faker (1.2.0)
       i18n (~> 0.5)
     ffi (1.9.3)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     hike (1.2.3)
     httparty (0.12.0)
       json (~> 1.8)
@@ -92,6 +95,7 @@ GEM
     multi_xml (0.5.5)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    oj (2.7.1)
     pg (0.17.1)
     polyglot (0.3.3)
     pry (0.9.12.6)
@@ -100,7 +104,10 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    rabl (0.9.3)
+      activesupport (>= 2.3.14)
     rack (1.5.2)
+    rack-cors (0.2.9)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.2)
@@ -200,12 +207,16 @@ DEPENDENCIES
   email_spec
   factory_girl_rails
   faker
+  figaro
   httparty
   jbuilder (~> 1.2)
   jquery-rails
   json
+  oj
   pg
   pry-rails
+  rabl
+  rack-cors
   rails (= 4.0.2)
   rails_12factor
   rails_layout

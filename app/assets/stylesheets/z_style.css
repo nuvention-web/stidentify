@@ -2,6 +2,29 @@ a:hover {
   text-decoration: none;
 }
 
+.search-button {
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+.profile-page {
+  margin-top: 4em;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+.profile-page span {
+  color: #B61F1F;
+}
+
+.stid span {
+  color: #B61F1F;
+}
+
+.add-picture{
+  width: 370px;
+}
+
 .left { text-align: left; }
 
 .center { text-align: center; }
@@ -19,12 +42,17 @@ a:hover {
   text-align: right;
 }
 
+.contact-us {
+  text-align: left;
+}
+
 .social-media span {
   color: #b61f1f;
 }
 
 .social-media-row {
-  margin-right: 0px;
+  margin: 5px;
+
 }
 
 .problem-title {
@@ -36,11 +64,15 @@ a:hover {
 }
 
 .asses {
-  height: 5vh;
+  height: 10vh;
 }
 
 .almost-fullscreen {
   height: 95vh;
+}
+
+.not-quite-fullscreen {
+  height: 90vh;
 }
 
 .section-home {
@@ -249,12 +281,15 @@ input {
   border-radius: 0.3em;
   margin-top: 0.5em;
   font-size: 12px;
+  font-family: "Roboto";
+  font-weight: 100;
 }
 
 .content-box {
   float: left;
-  margin-left: 10em;
+  margin-left: 3em;
   height: 500px;
+  width: 300px;
   overflow: auto;
 }
 
@@ -264,14 +299,21 @@ input {
 
 .gmap {
   float: right;
-  width: 600px;
-  margin-right: 10em;
+  width: 60vw;
+  margin-right: 5em;
+  margin-bottom: 5vh;
 }
 
 #map {
-  width: 600px;
+  width: 60vw;
   height: 500px;
 }
+
+img {
+  max-width: 100%;
+}
+
+.gmnoprint img { max-width: none; }
 
 .content-box p{
   font-size: 12px;

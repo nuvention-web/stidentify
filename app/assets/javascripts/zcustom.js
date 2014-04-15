@@ -741,10 +741,10 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 				this.el.queryLoader2({
 					barColor: '#B61F1F',
 					backgroundColor: '#fff',
-					percentage: true,
-					barHeight: 3,
+					percentage: false,
+					barHeight: 0,
 					completeAnimation: 'fade',
-					minimumTime: 700,
+					minimumTime: 0,
 					onComplete : function () { 
 						self.loader.fadeOut(200);
 						
