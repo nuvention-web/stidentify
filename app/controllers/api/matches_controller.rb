@@ -18,6 +18,17 @@ def new
 
 end
 
+def create
+  other_user = User.find_by(stid: params["stid"])
+
+  unless other_user.nil?
+    status = current_user.compare_with(other_user)
+    render json: {status: status, response: "success"}
+  else
+      render json: {response: "invalid stid"}
+  end
+end
+
 private
 
 def restrict_access
