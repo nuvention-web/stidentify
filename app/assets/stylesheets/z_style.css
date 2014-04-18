@@ -60,7 +60,7 @@ a:hover {
 }
 
 .fullscreen-thing {
-	height: 100vh; 
+  height: 100vh; 
 }
 
 .asses {
@@ -250,7 +250,7 @@ input {
 
 
 #logo span {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 
@@ -329,4 +329,3 @@ img {
 .content-box p:hover{
   background-color: rgba(200, 200, 200, 0.2);
 }
-
