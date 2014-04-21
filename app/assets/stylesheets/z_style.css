@@ -42,12 +42,17 @@ a:hover {
   text-align: right;
 }
 
+.contact-us {
+  text-align: left;
+}
+
 .social-media span {
   color: #b61f1f;
 }
 
 .social-media-row {
-  margin-right: 0px;
+  margin: 5px;
+
 }
 
 .problem-title {
@@ -55,15 +60,19 @@ a:hover {
 }
 
 .fullscreen-thing {
-	height: 100vh; 
+  height: 100vh; 
 }
 
 .asses {
-  height: 5vh;
+  height: 10vh;
 }
 
 .almost-fullscreen {
   height: 95vh;
+}
+
+.not-quite-fullscreen {
+  height: 90vh;
 }
 
 .section-home {
@@ -241,7 +250,7 @@ input {
 
 
 #logo span {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 
@@ -320,4 +329,3 @@ img {
 .content-box p:hover{
   background-color: rgba(200, 200, 200, 0.2);
 }
-

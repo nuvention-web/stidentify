@@ -21,7 +21,7 @@ module Stidentify
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     config.time_zone = "Central Time (US & Canada)"
 
-    config.force_ssl = false
+    config.force_ssl = true
     config.ssl_options = {hsts: {expires: 3600}}
 
     config.middleware.use Rack::Cors do

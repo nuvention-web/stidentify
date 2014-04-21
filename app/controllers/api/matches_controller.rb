@@ -7,17 +7,13 @@ class Api::MatchesController < ApplicationController
 
 def create
   #takes stid and compares user_id of access_token with stid, returns json results object
-  if logged_in? 
-    other_user = User.find_by(stid: params["stid"])
+  other_user = User.find_by(stid: params["stid"])
 
-    unless other_user.nil?
-      status = current_user.compare_with(other_user)
-      render json: {status: status, response: "success"}
-    else
-      render json: {status: "invalid stid", response: "success"}
-    end
+  unless other_user.nil?
+    status = current_user.compare_with(other_user)
+    render json: {status: status, response: "success"}
   else
-    render json: {response: "invalid credentials"}
+    render json: {status: "invalid stid", response: "success"}
   end
 end
 
