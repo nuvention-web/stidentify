@@ -48,14 +48,14 @@ def tests
     document_id = user.document_id
 
     test_results = {
-      chlamydia_result: params["chlamydiaResult"] if params["chlamydiaResult"],
-      gonorrhea_result: params["gonorrheaResult"] if params["gonorrheaResult"],
-      hepatitis_b_result: params["hepatitisBResult"] if params["hepatitisBResult"],
-      hepatitis_c_result: params["hepatitisCResult"] if params["hepatitisCResult"],
-      herpes_1_result: params["herpes1Result"] if params["herpes1Result"],
-      herpes_2_result: params["herpes2Result"] if params["herpes2Result"],
-      hiv_result: params["hivResult"] if params["hivResult"],
-      syphilis_result: params["syphilisResult"] if params["syphilisResult"]
+      chlamydia_result: params["chlamydiaResult"], 
+      gonorrhea_result: params["gonorrheaResult"],
+      hepatitis_b_result: params["hepatitisBResult"],
+      hepatitis_c_result: params["hepatitisCResult"],
+      herpes_1_result: params["herpes1Result"],
+      herpes_2_result: params["herpes2Result"],
+      hiv_result: params["hivResult"],
+      syphilis_result: params["syphilisResult"]
     }
 
     test_results = Base64.encode64(test_results.to_json).delete("\n")
@@ -69,7 +69,7 @@ def tests
     render json: {
       response: "success"
     }
-    
+
   end
 
 end
