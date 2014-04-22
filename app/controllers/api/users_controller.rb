@@ -40,6 +40,14 @@ def tests
     user = User.find(api_key.user_id)
     document_id = user.document_id
 
+    params.keys.each do |k|
+      if k.include?("Result")
+        params[k] = true if params[k] == "true"
+        params[k] = false if params[k] == "false"
+      end
+    end
+
+
     test_results = {
       chlamydia_result: params["chlamydiaResult"], 
       gonorrhea_result: params["gonorrheaResult"],
