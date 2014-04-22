@@ -7,13 +7,6 @@ class Api::UsersController < ApplicationController
 
 def create
   #takes stid and compares user_id of access_token with stid, returns json results object
-  firstName: [insert name],
-  lastName: [insert name,
-  password: [password],
-  passwordConfirmation: [password again],
-  email: [email address],
-
-
 
   user = User.new(first_name: params["firstName"], last_name: params["lastName"], email: params["email"])
   user.password = params["password"]
