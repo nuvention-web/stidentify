@@ -59,10 +59,12 @@ def tests
       body: { document: test_results }
     )
 
-    puts response
+    response = Base64.decode64(response)
+
 
     render json: {
-      response: "success"
+      response: "success",
+      tv: response.to_s
     }
 
   end
