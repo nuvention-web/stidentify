@@ -59,6 +59,8 @@ def tests
       body: { document: test_results }
     )
 
+    puts response
+
     render json: {
       response: "success"
     }
