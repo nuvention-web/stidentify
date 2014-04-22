@@ -19,16 +19,21 @@ Stidentify::Application.routes.draw do
       get "/search/results"
       get "/compare", to: "users#compare"
       post "/create_compare", to: "users#create_compare"
-      get "/results", to: "user#results"
+      get "/results", to: "users#results"
     end
   end
 
   resource :session
 
   namespace :api do
-    resources :sessions
-    resources :matches
-    resources :users
+    resources :sessions, only: [:create]
+    resources :matches, only: [:create]
+    resources :users, only: [:create] do
+      collection do
+        post "/tests", to: "users#tests"
+      end
+    end
+
   end
 
   # match 'api/sessions', to: "api/sessions#create", via: [:options]

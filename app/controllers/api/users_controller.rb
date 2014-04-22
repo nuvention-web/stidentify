@@ -39,6 +39,47 @@ def create
   end
 end
 
+def tests
+  api_key = ApiKey.find_by(access_token: params[:access_token])
+  if api_key.nil?
+    render json: { response: "invalid"}
+  else
+    user = User.find(api_key.user_id)
+    document_id = user.document_id
+
+    test_results = {
+      chlamydia_result: params["chlamydiaResult"] if params["chlamydiaResult"],
+      gonorrhea_result: params["gonorrheaResult"] if params["gonorrheaResult"],
+      hepatitis_b_result: params["hepatitisBResult"] if params["hepatitisBResult"],
+      hepatitis_c_result: params["hepatitisCResult"] if params["hepatitisCResult"],
+      herpes_1_result: params["herpes1Result"] if params["herpes1Result"],
+      herpes_2_result: params["herpes2Result"] if params["herpes2Result"],
+      hiv_result: params["hivResult"] if params["hivResult"],
+      syphilis_result: params["syphilisResult"] if params["syphilisResult"]
+    }
+
+    test_results = Base64.encode64(test_results.to_json).delete("\n")
+
+    response = HTTParty.put(
+      "https://api.truevault.com/v1/vaults/#{ENV['TV_VAULT_ID']}/documents/#{document_id}",
+      basic_auth: { username: ENV['TV_API_KEY'] },
+      body: { document: test_results }
+    )
+
+    render json: {
+      response: "success"
+    }
+    
+  end
+
+end
+
+
+
+
+
+
+
 private
 
 # def restrict_access
