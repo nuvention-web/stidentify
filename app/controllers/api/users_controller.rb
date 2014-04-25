@@ -33,7 +33,10 @@ def create
 end
 
 def tests
+  puts params["access_token"]
   api_key = ApiKey.find_by(access_token: params[:access_token])
+  puts api_key
+
 
   if api_key.nil?
     render json: { response: "invalid" }
