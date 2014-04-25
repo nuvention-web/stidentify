@@ -70,7 +70,7 @@ def tests
       body: { document: test_results }
     )
 
-    response = Base64.decode64(response)
+    response = JSON.parse(Base64.decode64(response))
 
     puts response
 
