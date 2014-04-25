@@ -36,8 +36,10 @@ def tests
   puts params["access_token"]
   api_key = ApiKey.find_by(access_token: params[:access_token])
   puts api_key
+
+
   if api_key.nil?
-    render json: { response: "invalid"}
+    render json: { response: "invalid" }
   else
     user = User.find(api_key.user_id)
     document_id = user.document_id
@@ -61,6 +63,8 @@ def tests
       syphilis_result: params["syphilisResult"]
     }
 
+    puts test_results
+
     test_results = Base64.encode64(test_results.to_json).delete("\n")
 
     response = HTTParty.put(
@@ -70,6 +74,8 @@ def tests
     )
 
     response = Base64.decode64(response)
+
+    puts response
 
 
     render json: {
