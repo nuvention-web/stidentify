@@ -7,6 +7,24 @@ a:hover {
   font-weight: 100;
 }
 
+.maps-phone {
+  background-image: url(http://i.imgur.com/nomsXjh.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
+.results-phone {
+  background-image: url(http://i.imgur.com/uJDn2Hd.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
 .profile-page {
   margin-top: 4em;
   font-family: "Roboto";
@@ -53,7 +71,6 @@ a:hover {
 
 .social-media-row {
   margin: 5px;
-
 }
 
 .problem-title {
@@ -65,15 +82,19 @@ a:hover {
 }
 
 .asses {
-  height: 10vh;
+  height: 20vh;
 }
 
 .almost-fullscreen {
   height: 95vh;
 }
 
+.more-than-fullscreen {
+  height: 180vh;
+}
+
 .not-quite-fullscreen {
-  height: 90vh;
+  height: 80vh;
 }
 
 .section-home {
@@ -250,8 +271,8 @@ input {
 }
 
 
-#logo span {
-  color: #ffffff;
+#logo {
+  margin-bottom: 3px;
 }
 
 
