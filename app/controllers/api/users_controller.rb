@@ -76,6 +76,8 @@ def tests
     response = JSON.parse(Base64.decode64(response))
 
     puts response
+    puts "break"
+    puts response.to_s
 
 
     render json: {
