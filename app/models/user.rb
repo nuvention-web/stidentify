@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 
 	user2_keys = user2.keys.select { |key| !(key.include?("trich")) && !(key.include?("hpv")) }
 
-	if (user1_keys.count != 16 || user2_keys.count != 16)
+	if (user1_keys.count != 8 || user2_keys.count != 8)
 		status = "caution"
 	end
 
