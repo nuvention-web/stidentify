@@ -48,6 +48,7 @@ def tests
       if k.include?("Result")
         params[k] = true if params[k] == "true"
         params[k] = false if params[k] == "false"
+        params[k] = nil if params[k] == "null"
       end
     end
 
