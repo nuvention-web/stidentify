@@ -30,6 +30,8 @@ def create
 
   user.document_id = response["document_id"]
 
+  puts user
+
   if user.save!
     api_key = ApiKey.create
     api_key.user_id = user.id
