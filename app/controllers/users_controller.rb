@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     @user.document_id = response["document_id"]
 
     if @user.save
-      UserMailer.signup(@user).deliver
+      # UserMailer.signup(@user).deliver
       # session[:user_id] = @user.id
       # redirect_to user_path(@user)
       redirect_to thanks_path
