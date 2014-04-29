@@ -63,17 +63,17 @@ class User < ActiveRecord::Base
   	end
     
 
-    user2.keys.each do |key|
-      unless key.include?("trich") || key.include?("hpv")
-        if key.include?("result")
-          if user1[key].nil? && status != "nonmatch"
-            status = "caution"
-          elsif user1[key] != user2[key]
-            status = "nonmatch"
-          end
-        end
-      end
-    end
+    # user2.keys.each do |key|
+    #   unless key.include?("trich") || key.include?("hpv")
+    #     if key.include?("result")
+    #       if user1[key].nil? && status != "nonmatch"
+    #         status = "caution"
+    #       elsif user1[key] != user2[key]
+    #         status = "nonmatch"
+    #       end
+    #     end
+    #   end
+    # end
 
   	if status != "caution" && status != "nonmatch"
   		status = "match"
