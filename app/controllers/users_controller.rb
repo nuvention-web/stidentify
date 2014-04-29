@@ -30,6 +30,9 @@ class UsersController < ApplicationController
 
     # binding.pry
 
+    puts response
+    puts response
+    puts response
     puts response["document_id"]
     puts response["document_id"]
     puts response["document_id"]
