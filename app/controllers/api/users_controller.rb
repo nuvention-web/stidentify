@@ -8,11 +8,11 @@ class Api::UsersController < ApplicationController
 def create
   #takes stid and compares user_id of access_token with stid, returns json results object
 
-  user = User.new(first_name: params["firstName"], last_name: params["lastName"], email: params["user"]["email"])
+  user = User.new(first_name: params["firstName"], last_name: params["lastName"], email: params["email"])
   user.password = params["password"]
   user.password_confirmation = params["passwordConfirmation"]
 
-  if user.save
+  if user.save!
     api_key = ApiKey.create
     api_key.user_id = user.id
     api_key.save
