@@ -9,19 +9,15 @@ class User < ActiveRecord::Base
   def self.assign_stid
   	stid = User.generate_stid
 
-  	until User.find_by(stid: stid).nil?
-	  stid = User.generate_stid
-	end
+    until User.find_by(stid: stid).nil?
+  	  stid = User.generate_stid
+  	end
 
-	stid
+	 stid
   end
 
   def self.generate_stid
-  	sample_set = (0..9).to_a + ("a".."z").to_a
-    sample_set.delete("o")
-  	stid = []
-  	6.times { stid << sample_set.sample }
-  	stid.join("")
+  	SecureRandom.hex
   end
 
   def compare_with(user)

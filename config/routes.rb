@@ -26,7 +26,11 @@ Stidentify::Application.routes.draw do
   resource :session
 
   namespace :api do
-    resources :sessions, only: [:create]
+    resources :sessions, only: [:create] do
+      collection do
+        post "/logout", to: "sessions#logout"
+      end
+    end
     resources :matches, only: [:create]
     resources :users, only: [:create] do
       collection do

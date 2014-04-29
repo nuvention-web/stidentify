@@ -19,6 +19,10 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  def logout
+    ApiKey.find_by(access_token: params["access_token"]).destroy!
+  end
+
 
   private
 
