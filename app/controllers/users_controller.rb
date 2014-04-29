@@ -30,6 +30,10 @@ class UsersController < ApplicationController
 
     # binding.pry
 
+    puts response
+    puts response 
+    puts response
+
     @user.document_id = response["document_id"]
 
     if @user.save
