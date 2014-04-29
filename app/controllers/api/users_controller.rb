@@ -21,8 +21,7 @@ def create
     "https://api.truevault.com/v1/vaults/#{ENV['TV_VAULT_ID']}/documents",
     basic_auth: {username: ENV['TV_API_KEY']},
     body: {
-      document: encoded_stid,
-      schema_id: ENV['TV_SCHEMA_ID']
+      document: encoded_stid
     }
   )
 
