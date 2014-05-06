@@ -9,19 +9,15 @@ class User < ActiveRecord::Base
   def self.assign_stid
   	stid = User.generate_stid
 
-  	until User.find_by(stid: stid).nil?
-	  stid = User.generate_stid
-	end
+    until User.find_by(stid: stid).nil?
+  	  stid = User.generate_stid
+  	end
 
-	stid
+	 stid
   end
 
   def self.generate_stid
-  	sample_set = (0..9).to_a + ("a".."z").to_a
-    sample_set.delete("o")
-  	stid = []
-  	6.times { stid << sample_set.sample }
-  	stid.join("")
+  	SecureRandom.hex
   end
 
   def compare_with(user)
@@ -48,7 +44,7 @@ class User < ActiveRecord::Base
 
 	user2_keys = user2.keys.select { |key| !(key.include?("trich")) && !(key.include?("hpv")) }
 
-	if (user1_keys.count != 16 || user2_keys.count != 16)
+	if (user1_keys.count != 8 || user2_keys.count != 8)
 		status = "caution"
 	end
 
@@ -65,6 +61,19 @@ class User < ActiveRecord::Base
 	  		end
 	  	end
   	end
+    
+
+    user2.keys.each do |key|
+      unless key.include?("trich") || key.include?("hpv")
+        if key.include?("result")
+          if user1[key].nil? && status != "nonmatch"
+            status = "caution"
+          elsif user1[key] != user2[key]
+            status = "nonmatch"
+          end
+        end
+      end
+    end
 
   	if status != "caution" && status != "nonmatch"
   		status = "match"
