@@ -7,6 +7,10 @@ a:hover {
   font-weight: 100;
 }
 
+.new-signup {
+
+}
+
 .maps-phone {
   background-image: url(http://i.imgur.com/nomsXjh.png);
   background-size: 80%;
@@ -185,11 +189,15 @@ a:hover {
   margin: 0px;
 }
 
+#contentFooter {
+  height:auto;
+}
+
 .sign-up {
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100;
-  width: 30vmax;
+  width: 80vmin;
   color: #B61F1F !important;
 }
 
@@ -311,7 +319,7 @@ input {
 
 
 .new_user, .sign-in, .search {
-  width: 30vmax;
+  width: 80vmin;
   margin: 0em auto 0 auto;
 }
 
