@@ -196,7 +196,7 @@
 
 				<!-- <center><p>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong></p></center> -->
 				
-
+<center>
 				<div class="signup-background">
   <%= form_for User.new, url: users_path, class: "form-horizontal new-user" do |f| %>
 
@@ -211,16 +211,12 @@
 
       <br/>
 
-     <center>
-
-     <!--  <%= f.label :over_18, "I am over 18:", class: "over_18" %> &nbsp;&nbsp;
-      <%= f.check_box :over_18 %> -->
-      </center>
       
-      <center>
+      
       <%= f.submit "Sign Up", class: "button sign-up turquoise middle" %>
-      </center>
+     
   <% end %>
+  <center>
 </div>
 					
 				</div>
@@ -323,6 +319,7 @@
 
 <script>
 	if ($(window).width() < 510) {
+		$("#wrapper").height(600)
 		$(".video").append("<iframe width='330' height='186' src='//www.youtube.com/embed/Gar_ogBDNkc?autoplay=1&controls=0&showinfo=0&rel=0&frameborder=0&showinfo=0'></iframe>")
 	} else {
 		$(".video").html("<iframe width='560' height='315' src='//www.youtube.com/embed/Gar_ogBDNkc?autoplay=1&controls=0&showinfo=0&rel=0&frameborder=0&showinfo=0'></iframe>")
