@@ -9,10 +9,10 @@ class UsersController < ApplicationController
     @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
     # @user = User.new(first_name: params[:first_name], last_name: "CHANGE ME", email: params[:email])
     # @user.over_18 = ( params[:over_18] == "1" )
-    # @user.password = "changeme123"
-    # @user.password_confirmation = "changeme123"
-    @user.password = params[:password]
-    @user.password_confirmation = params[:password_confirmation]
+    @user.password = "changeme123"
+    @user.password_confirmation = "changeme123"
+    # @user.password = params[:password]
+    # @user.password_confirmation = params[:password_confirmation]
 
     @user.stid = User.assign_stid
 

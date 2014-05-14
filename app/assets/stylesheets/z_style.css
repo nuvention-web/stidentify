@@ -190,6 +190,7 @@ a:hover {
   font-size: 30px;
   font-weight: 100;
   width: 30vmax;
+  color: #B61F1F !important;
 }
 
 .dots-image {
@@ -383,4 +384,12 @@ img {
 
 .content-box p:hover{
   background-color: rgba(200, 200, 200, 0.2);
+}
+
+input {
+  background-color: white !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  border-bottom: solid 1px lightgray !important;
 }

@@ -11,6 +11,7 @@ def create
   user = User.new(first_name: params["firstName"], last_name: params["lastName"], email: params["email"])
   user.password = params["password"]
   user.password_confirmation = params["passwordConfirmation"]
+ 
 
   user.stid = User.assign_stid
 

@@ -53,19 +53,7 @@
 </head>
 
 <body>
-  <% if params[:action] == "home" %>
-      <% if current_user %>
-        <%= render 'layouts/logged_in_header' %>
-      <% else %>
-        <%= render 'layouts/logged_out_header' %>
-      <% end %>
-    <% else %>
-      <% if current_user %>
-        <%= render 'layouts/logged_in_header2' %>
-      <% else %>
-        <%= render 'layouts/logged_out_header2' %>
-      <% end %>
-    <% end %>
+
     <%= yield %>
 
     <script>
