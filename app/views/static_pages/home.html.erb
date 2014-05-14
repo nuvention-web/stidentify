@@ -19,22 +19,33 @@
 	
 	<section id="home" class="page">
 		
-		<section class="section-home section parallax parallax-bg-1 bg-turquoise-color fullscreen-thing">
+		<section class="section-home section parallax parallax-bg-1 bg-turquoise-color fullscreen-thing" style="background-color:white">
 
-			<div class="full-bg-image"></div>
-
+<!-- 			<div class="full-bg-image"></div>
+ -->
 			<div class="container">
 
 				<div class="row">
 					
-					<div class="counter-guy col-xs-12 center">
-	
-					<h1 class="counter-real"><%= ((Time.zone.now.seconds_since_midnight)*0.63419583967).to_i %></h1>
-					<h2>new<br><span>Sexually Transmitted Infections</span><br>in America, today.</h2>
-					<a href="#problem"><button class="learn-more button learn">Learn More</button></a>
+<!-- 					<div class="counter-guy col-xs-12 center">
+ -->
+					<center>
 
-					</div>
-					
+						<img src="https://s3-us-west-2.amazonaws.com/stid-images/Logo+with+Full+Name+(1).png" style="width:400px;display:block;margin-bottom:2em;margin-top:1.5em">
+						<h2 style="color:#B61F1F;font-family:Roboto">Introducing verifiably safe sex to the twenty-first century.</h2>
+						</br>
+						<div class="video">
+						
+						</div>
+		<!-- 
+						<h1 class="counter-real"><%= ((Time.zone.now.seconds_since_midnight)*0.63419583967).to_i %></h1>
+						<h2>new<br><span>Sexually Transmitted Infections</span><br>in America, today.</h2>
+						<a href="#problem"><button class="learn-more button learn">Learn More</button></a> -->
+
+					</center>
+
+<!-- 					</div>
+ -->					
 				</div>
 
 			</div>
@@ -44,7 +55,7 @@
 	</section>
 
 	
-	<section id="problem" class="page">
+	<!-- <section id="problem" class="page">
 		
 		<section class="problem-section section almost-fullscreen">
 
@@ -103,9 +114,9 @@
 		</section>
 		
 	</section>
-
+ -->
 	
-	<section id="solution" class="page">
+	<!-- <section id="solution" class="page">
 		
 		<section class="section more-than-fullscreen bg-gray-color">
 			
@@ -165,11 +176,11 @@
 		</section>		
 					
 	</section>
-		
+		 -->
 	
 	<section id="signup" class="page">
 		
-		<section class="not-quite-fullscreen section">
+		<section class="not-quite-fullscreen section" style="background-color:#B61F1F">
 			
 			<div class="container">
 				
@@ -177,7 +188,7 @@
 					
 					<div class="col-xs-12">
 						<hgroup class="section-title align-center opacity">
-							<h1>join the movement</h1>
+							<h1 style="color:white">join the movement</h1>
 						</hgroup>							
 					</div>
 
@@ -185,30 +196,27 @@
 
 				<!-- <center><p>Already signed up? <strong><%= link_to "Click here to sign in.", new_session_path %></strong></p></center> -->
 				
-
+<center>
 				<div class="signup-background">
   <%= form_for User.new, url: users_path, class: "form-horizontal new-user" do |f| %>
-      
+
+
       <%= f.text_field :first_name, placeholder: "First Name", class: "col-sm-2" %>
  			<%= f.text_field :last_name, placeholder: "Last Name", class: "col-sm-2" %>
 
       <%= f.text_field :email, placeholder: "Email Address", class: "col-sm-2" %>
 
-    <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
-      <%= f.password_field :password_confirmation, placeholder: "Password Again", class: "col-sm-2" %>
+  <!--   <%= f.password_field :password, placeholder: "Password", class: "col-sm-2" %>
+      <%= f.password_field :password_confirmation, placeholder: "Password Again", class: "col-sm-2" %> -->
 
       <br/>
 
-     <center>
-
-     <!--  <%= f.label :over_18, "I am over 18:", class: "over_18" %> &nbsp;&nbsp;
-      <%= f.check_box :over_18 %> -->
-      </center>
       
-      <center>
+      
       <%= f.submit "Sign Up", class: "button sign-up turquoise middle" %>
-      </center>
+     
   <% end %>
+  <center>
 </div>
 					
 				</div>
@@ -310,6 +318,12 @@
 </script>
 
 <script>
+	if ($(window).width() < 510) {
+		$("#home").height(600)
+		$(".video").append("<iframe width='330' height='186' src='//www.youtube.com/embed/Gar_ogBDNkc?autoplay=1&controls=0&showinfo=0&rel=0&frameborder=0&showinfo=0'></iframe>")
+	} else {
+		$(".video").html("<iframe width='560' height='315' src='//www.youtube.com/embed/Gar_ogBDNkc?autoplay=1&controls=0&showinfo=0&rel=0&frameborder=0&showinfo=0'></iframe>")
+	}
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

@@ -11,8 +11,28 @@ def create
   user = User.new(first_name: params["firstName"], last_name: params["lastName"], email: params["email"])
   user.password = params["password"]
   user.password_confirmation = params["passwordConfirmation"]
+ 
 
-  if user.save
+  user.stid = User.assign_stid
+
+  encoded_stid = { stid: user.stid }
+  encoded_stid = Base64.encode64(encoded_stid.to_json).delete("\n")
+
+  response = HTTParty.post(
+    "https://api.truevault.com/v1/vaults/#{ENV['TV_VAULT_ID']}/documents",
+    basic_auth: {username: ENV['TV_API_KEY']},
+    body: {
+      document: encoded_stid
+    }
+  )
+
+  # binding.pry
+
+  user.document_id = response["document_id"]
+
+  puts user
+
+  if user.save!
     api_key = ApiKey.create
     api_key.user_id = user.id
     api_key.save
