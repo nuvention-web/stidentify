@@ -7,6 +7,55 @@ a:hover {
   font-weight: 100;
 }
 
+.new-signup {
+
+}
+
+.maps-phone {
+  background-image: url(http://i.imgur.com/nomsXjh.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
+.results-phone {
+  background-image: url(http://i.imgur.com/uJDn2Hd.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
+.compare-phone-1 {
+  background-image: url(http://i.imgur.com/kofu7sN.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
+.compare-phone-2 {
+  background-image: url(http://i.imgur.com/6FkhdEW.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
+.compare-phone-3 {
+  background-image: url(http://i.imgur.com/DxhPQzc.png);
+  background-size: 80%;
+  background-position: 50% 120%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 450px;
+}
+
 .profile-page {
   margin-top: 4em;
   font-family: "Roboto";
@@ -42,12 +91,15 @@ a:hover {
   text-align: right;
 }
 
+.contact-us {
+  text-align: left;
+}
+
 .social-media span {
   color: #b61f1f;
 }
 
 .social-media-row {
-  margin-right: 0px;
 }
 
 .problem-title {
@@ -55,15 +107,31 @@ a:hover {
 }
 
 .fullscreen-thing {
-	height: 100vh; 
+  height: 85vh; 
+}
+
+.red-thing h2 {
+  color: #b61f1f;
+}
+
+.right-j {
+  text-align: right;
 }
 
 .asses {
-  height: 5vh;
+  height: 20vh;
 }
 
 .almost-fullscreen {
   height: 95vh;
+}
+
+.more-than-fullscreen {
+  height: 180vh;
+}
+
+.not-quite-fullscreen {
+  height: 100vh;
 }
 
 .section-home {
@@ -121,11 +189,16 @@ a:hover {
   margin: 0px;
 }
 
+#contentFooter {
+  height:auto;
+}
+
 .sign-up {
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 100;
-  width: 30vmax;
+  width: 80vmin;
+  color: #B61F1F !important;
 }
 
 .dots-image {
@@ -240,13 +313,13 @@ input {
 }
 
 
-#logo span {
-	color: #ffffff;
+#logo {
+  margin-bottom: 3px;
 }
 
 
 .new_user, .sign-in, .search {
-  width: 30vmax;
+  width: 80vmin;
   margin: 0em auto 0 auto;
 }
 
@@ -321,3 +394,10 @@ img {
   background-color: rgba(200, 200, 200, 0.2);
 }
 
+input {
+  background-color: white !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  border-bottom: solid 1px lightgray !important;
+}

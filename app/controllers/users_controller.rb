@@ -6,9 +6,9 @@ class UsersController < ApplicationController
 
   def create
     params = user_params
-    # @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
-    @user = User.new(first_name: params[:first_name], last_name: "CHANGE ME", email: params[:email])
-    @user.over_18 = ( params[:over_18] == "1" )
+    @user = User.new(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
+    # @user = User.new(first_name: params[:first_name], last_name: "CHANGE ME", email: params[:email])
+    # @user.over_18 = ( params[:over_18] == "1" )
     @user.password = "changeme123"
     @user.password_confirmation = "changeme123"
     # @user.password = params[:password]
@@ -23,17 +23,23 @@ class UsersController < ApplicationController
       "https://api.truevault.com/v1/vaults/#{ENV['TV_VAULT_ID']}/documents",
       basic_auth: {username: ENV['TV_API_KEY']},
       body: {
-        document: encoded_stid,
-        schema_id: ENV['TV_SCHEMA_ID']
+        document: encoded_stid
       }
     )
 
     # binding.pry
 
+    puts response
+    puts response
+    puts response
+    puts response["document_id"]
+    puts response["document_id"]
+    puts response["document_id"]
+
     @user.document_id = response["document_id"]
 
     if @user.save
-      UserMailer.signup(@user).deliver
+      # UserMailer.signup(@user).deliver
       # session[:user_id] = @user.id
       # redirect_to user_path(@user)
       redirect_to thanks_path
