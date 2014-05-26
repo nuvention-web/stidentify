@@ -131,7 +131,8 @@ class Api::UsersController < ApplicationController
         "herpes_1_result"=> response["herpes_1_result"],
         "herpes_2_result"=> response["herpes_2_result"],
         "hiv_result"=> response["hiv_result"],
-        "syphilis_result"=> response["syphilis_result"]
+        "syphilis_result"=> response["syphilis_result"],
+        access_token: params[:access_token]
       }
 
     end
@@ -148,7 +149,8 @@ class Api::UsersController < ApplicationController
       render json: { response: "success",
         first_name: user.first_name,
         last_name: user.last_name,
-        email: user.email
+        email: user.email,
+        access_token: params[:access_token]
       }
     end
   end
@@ -167,7 +169,8 @@ class Api::UsersController < ApplicationController
       render json: { response: "success",
         first_name: user.first_name,
         last_name: user.last_name,
-        email: user.email
+        email: user.email,
+        access_token: params[:access_token]
       }
     end
   end
