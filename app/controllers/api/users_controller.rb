@@ -52,7 +52,7 @@ def create
   end
 end
 
-def tests
+def add_results
   puts params["access_token"]
   api_key = ApiKey.find_by(access_token: params[:access_token])
   puts api_key
@@ -100,12 +100,75 @@ def tests
     puts "break"
     puts response.to_s
 
+    test_results["response"] = "success"
 
-    render json: {
-      response: "success",
-      tv: response.to_s
-    }
 
+    render json: test_results
+  end
+
+  def current_results
+    api_key = ApiKey.find_by(access_token: params[:access_token])
+
+    if api_key.nil?
+      render json: { response: "invalid" }
+    else
+      user = User.find(api_key.user_id)
+      document_id = user.document_id
+
+      response = HTTParty.get(
+        "https://api.truevault.com/v1/vaults/#{ENV['TV_VAULT_ID']}/documents/#{document_id}",
+        basic_auth: { username: ENV['TV_API_KEY'] }
+      )
+
+      response = JSON.parse(Base64.decode64(response))
+
+      render json: { response: "sucess",
+        "chlamydia_result"=> response["chlamydia_result"],
+        "gonorrhea_result"=> response["gonorrhea_result"],
+        "hepatitis_b_result"=> response["hepatitis_b_result"],
+        "hepatitis_c_result"=> response["hepatitis_c_result"],
+        "herpes_1_result"=> response["herpes_1_result"],
+        "herpes_2_result"=> response["herpes_2_result"],
+        "hiv_result"=> response["hiv_result"],
+        "syphilis_result"=> response["syphilis_result"]
+      }
+
+    end
+  end
+
+  def info
+    api_key = ApiKey.find_by(access_token: params[:access_token])
+
+    if api_key.nil?
+      render json: { response: "invalid" }
+    else
+      user = User.find(api_key.user_id)
+
+      render json: { response: "sucess",
+        first_name: user.first_name,
+        last_name: user.last_name,
+        email: user.email
+      }
+    end
+  end
+
+  def update_info
+    api_key = ApiKey.find_by(access_token: params[:access_token])
+
+    if api_key.nil?
+      render json: { response: "invalid" }
+    else
+      user = User.find(api_key.user_id)
+      user.update!(first_name: params["firstName"], last_name: params["lastName"], email: params["email"])
+      user.password = params["password"]
+      user.password_confirmation = params["passwordConfirmation"]
+
+      render json: { response: "sucess",
+        first_name: user.first_name,
+        last_name: user.last_name,
+        email: user.email
+      }
+    end
   end
 
 end

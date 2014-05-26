@@ -34,7 +34,10 @@ Stidentify::Application.routes.draw do
     resources :matches, only: [:create]
     resources :users, only: [:create] do
       collection do
-        post "/tests", to: "users#tests"
+        post "/add_results", to: "users#add_results"
+        post "/update_info", to: "users#update_info"
+        post "/info", to: "users#info"
+        post "/current_results", to: "users#current_results"
       end
     end
 
