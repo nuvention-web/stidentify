@@ -124,7 +124,7 @@ class Api::UsersController < ApplicationController
 
       response = JSON.parse(Base64.decode64(response))
 
-      render json: { response: "sucess",
+      render json: { response: "success",
         "chlamydia_result"=> response["chlamydia_result"],
         "gonorrhea_result"=> response["gonorrhea_result"],
         "hepatitis_b_result"=> response["hepatitis_b_result"],
