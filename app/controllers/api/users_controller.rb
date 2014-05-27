@@ -101,6 +101,7 @@ class Api::UsersController < ApplicationController
       puts response.to_s
 
       test_results["response"] = "success"
+      test_results["access_token"] = params[:access_token]
 
 
       render json: test_results
@@ -163,8 +164,10 @@ class Api::UsersController < ApplicationController
     else
       user = User.find(api_key.user_id)
       user.update!(first_name: params["firstName"], last_name: params["lastName"], email: params["email"])
-      user.password = params["password"]
-      user.password_confirmation = params["passwordConfirmation"]
+      unless params["password"] == "xxxxxxxx"
+        user.password = params["password"]
+        user.password_confirmation = params["passwordConfirmation"]
+      end
 
       render json: { response: "success",
         first_name: user.first_name,
